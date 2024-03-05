@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/base.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous">
+    
+    <title>{{title}}</title>
+</head>
+
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <a href="/weapons"><img src="static/img/sc_logo.png"></a>
+        {% if current_user.is_authenticated %}
+        <a href="/logout"><h2>{{ current_user.name }}</h2></a>
+        {% else %}
+        <p>
+            <a href="/register"><button>Зарегистрироваться</button></a>
+            <a href="/login"><button >Войти</button></a>
+        </p>
+        {% endif %}
+    </nav>
+</header>
+<body>
+    <section>
+        <div>
+            <main role="main" class="container">
+                <div class="container-sm">
+                    <a href="/weapons"><button class="btn"><h6>Weapons</h6></button></a>
+                    <a href="/armor"><button class="btn"><h6>Armor</h6></button></a>
+                </div>                
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </section>
+</body>
+</html>
