@@ -8,5 +8,5 @@ class ArmorForm(FlaskForm):
     title = StringField('Заголовок', validators=[DataRequired()])
     content = TextAreaField("Содержание")
     is_private = BooleanField("Личное")
+    favourite = BooleanField("Избранное")
     submit = SubmitField('Применить')
-

@@ -3,9 +3,14 @@
 {% block content %}
 <link rel="stylesheet" href="/static/index.css">
 <h1>Броня</h1>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 {% if current_user.is_authenticated %}
-    <a href="new_armor" class="btn btn-secondary">Добавить броню</a>
+    <a href="/new_armor" class="btn btn-secondary">Добавить броню</a>
+    {% if fav == 0 %}
+        <a href="/armor/favourite" class="fav-btn"><button>Избранное</button></a>
+    {% else %}
+        <a href="/armor" class="fav-btn"><button>Все</button></a>
+    {% endif %}
 {% endif %}
 {% for item in new_armor%}
 <div class="col-md6-border-rounded">
@@ -16,7 +21,17 @@
     <div>
         Автор - {{item.user.name}}, Дата написания - {{item.created_date}}
         {% if current_user.is_authenticated and current_user == item.user %}
-    <div>
+        <a href="/armor/{{ item.id }}">
+            <button class="icon">
+                {% if item.favourite == 1 %}
+                <i class="fa-solid fa-heart" style="color: white; text-shadow: 5px 5px 6px black;"></i>
+                {% else %}
+                <i class="fa-solid fa-heart" style="color: red; text-shadow: 5px 5px 6px orange;"></i>
+                {% endif %}
+            </button>
+
+        </a>
+    <div> 
         <a href="/new_armor/{{ item.id }}" class="btn btn-warning">
             Изменить
         </a>
@@ -27,6 +42,5 @@
 {% endif %}
     </div>
 </div>
-
 {% endfor %}
 {% endblock %}

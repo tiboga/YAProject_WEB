@@ -54,39 +54,66 @@ def cookie_test():
                        max_age=60 * 60 * 24 * 365 * 2)
     return res
 
-
+@app.route('/weapons/<int:id>', methods=['GET', 'POST'])
+@app.route('/weapons/<fav>', methods=['GET', 'POST'])
 @app.route('/weapons')
-def weapons():
+def weapons(id=0, fav=False):
     db_sess = db_session.create_session()
     if current_user.is_authenticated:
-        weapons = db_sess.query(Weapons).filter(
-            (Weapons.user == current_user) | (Weapons.is_private != True))
+        if fav == "favourite":
+            weapons = db_sess.query(Weapons).filter(((Weapons.user == current_user) | (Weapons.is_private != True)) & (Weapons.favourite == 0))
+        else:
+            weapons = db_sess.query(Weapons).filter(
+                (Weapons.user == current_user) | (Weapons.is_private != True))
     else:
         weapons = db_sess.query(Weapons).filter(Weapons.is_private != True)
-    return render_template("weapons.html", new_weapon=weapons)
+    if id != 0:
+        weapon1 = db_sess.query(Weapons).filter(Weapons.id == id,
+                                        Weapons.user == current_user
+                                        ).first()
+        if weapon1:
+            if weapon1.favourite == 0:
+                weapon1.favourite = 1
+            else:
+                weapon1.favourite = 0
+            db_sess.commit()
+        else:
+            abort(404)      
+        return redirect("/weapons")
+    return render_template("weapons.html", new_weapon=weapons, fav=fav)
 
 
+@app.route('/armor/<int:id>', methods=['GET', 'POST'])
+@app.route('/armor/<fav>', methods=['GET', 'POST'])
 @app.route('/armor')
-def armor():
+def armor(id=0, fav=False):
     db_sess = db_session.create_session()
     if current_user.is_authenticated:
-        armor = db_sess.query(Armor).filter(
-            (Armor.user == current_user) | (Armor.is_private != True))
+        if fav == "favourite":
+            armor = db_sess.query(Armor).filter(((Armor.user == current_user) | (Armor.is_private != True)) & (Armor.favourite == 0))
+        else:
+            armor = db_sess.query(Armor).filter(
+                (Armor.user == current_user) | (Armor.is_private != True))
     else:
-        armor = db_sess.query(Armor).filter(Armor.is_private != True)
-    return render_template("armor.html", new_armor=armor)
-
+        armor = db_sess.query(Armor).filter(Armor.is_private != True) 
+    if id != 0:
+        armor1 = db_sess.query(Armor).filter(Armor.id == id,
+                                        Armor.user == current_user
+                                        ).first()
+        if armor1:
+            if armor1.favourite == 0:
+                armor1.favourite = 1
+            else:
+                armor1.favourite = 0
+            db_sess.commit()
+        else:
+            abort(404)      
+        return redirect("/armor")
+    return render_template("armor.html", new_armor=armor, fav=fav)
 
 @app.route('/')
 def index():
-    db_sess = db_session.create_session()
-    if current_user.is_authenticated:
-        weapons = db_sess.query(Weapons).filter(
-            (Weapons.user == current_user) | (Weapons.is_private != True))
-    else:
-        weapons = db_sess.query(Weapons).filter(Weapons.is_private != True)
-    return render_template("weapons.html", new_weapon=weapons)
-
+    return redirect('/weapons')
 
 @app.route('/new_weapon', methods=['GET', 'POST'])
 @login_required
@@ -168,7 +195,7 @@ def add_armor():
         current_user.armor.append(armor)
         db_sess.merge(current_user)
         db_sess.commit()
-        return redirect('/weapons')
+        return redirect('/armor')
     return render_template('new_armor.html', title='Добавление брони',
                            form=form)
 
@@ -198,14 +225,13 @@ def edit_armor(id):
             armor.content = form.content.data
             armor.is_private = form.is_private.data
             db_sess.commit()
-            return redirect('/weapons')
+            return redirect('/armor')
         else:
             abort(404)
     return render_template('new_armor.html',
                            title='Редактирование новости',
                            form=form
                            )
-
 
 @app.route('/armor_delete/<int:id>', methods=['GET', 'POST'])
 @login_required
@@ -220,7 +246,6 @@ def armor_delete(id):
     else:
         abort(404)
     return redirect('/armor')
-
 
 @app.route("/session_test")
 def session_test():
@@ -263,7 +288,7 @@ def register():
 
 
 def main():
-    db_session.global_init("db/blog.db")
+    db_session.global_init("db/blogs.db")
     api.add_resource(weapons_resources.WeaponsListResource, '/api/v2/weapons')
     api.add_resource(weapons_resources.WeaponsResource, '/api/v2/weapons/<int:weapons_id>')
     app.run()
