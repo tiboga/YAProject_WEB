@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link rel="stylesheet" href="/static/base.css">
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
           crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="/static/buttons.css">
     <title>{{title}}</title>
 </head>
-
 <header>
     <nav class="navbar navbar-light bg-light">
-        <a href="/weapons"><img src="static/img/sc_logo.png"></a>
+        <a href="/"><img src="static/img/sc_logo.png"></a>
         {% if current_user.is_authenticated %}
-        <a href="/logout"><h2>{{ current_user.name }}</h2></a>
+        <i class="fa-solid fa-user"></i><a href="/logout"><h2>{{ current_user.name }}</h2></a>
         {% else %}
         <p>
             <a href="/register"><button>Зарегистрироваться</button></a>
@@ -28,11 +28,33 @@
 <body>
     <section>
         <div>
-            <main role="main" class="container">
-                <div class="container-sm">
-                    <a href="/weapons"><button class="btn"><h6>Weapons</h6></button></a>
-                    <a href="/armor"><button class="btn"><h6>Armor</h6></button></a>
-                </div>                
+            <main role="main" class="container">  
+                <div>
+                    <ul>
+                        <li><a href="#">Weapons &bigtriangledown;</a>
+                            <ul>
+                                <li><a href="#">asault_rifle</a></li>
+                                <li><a href="#">device</a></li>
+                                <li><a href="#">heavy</a></li>
+                                <li><a href="#">machine_gun</a></li>
+                                <li><a href="#">melee</a></li>
+                                <li><a href="#">pistol</a></li>
+                                <li><a href="#">shotgun_rifle</a></li>
+                                <li><a href="#">sniper_rifle</a></li>
+                                <li><a href="#">submachine_rifle</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Armors &bigtriangledown;</a>
+                            <ul>
+                                <li><a href="#">clothes</a></li>
+                                <li><a href="#">combat</a></li>
+                                <li><a href="#">combined</a></li>
+                                <li><a href="#">device</a></li>
+                                <li><a href="#">scientist</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div> 
                 {% block content %}{% endblock %}
             </main>
         </div>

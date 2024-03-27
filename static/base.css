@@ -3,6 +3,7 @@ h1{
 }
 nav{
     background: url(img/header_3.jpg);
+    box-shadow: 0px 5px 5px white;
 }
 
 section{

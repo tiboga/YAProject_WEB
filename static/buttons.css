@@ -1,0 +1,36 @@
+* { 
+    list-style: none;
+    text-decoration: none;
+}
+
+div ul li {
+    position: relative;
+    margin-left: 200px;
+    display: inline-block;
+}
+div ul li a {
+    padding: 15px;
+    color: white;
+    font-size: 22px;
+    display: block;
+    text-decoration: none;
+}
+div ul li a:hover {
+
+    color: black;
+    background-color: #fff;
+    text-decoration: none;
+    border: 2px solid grey
+}
+div ul li ul {
+    position: absolute;
+    left: -200px;
+    width: 225px;
+    display: none;
+}
+div ul li ul li {
+    width: 100%;
+}
+div ul li:hover ul {
+    display: block;
+}
