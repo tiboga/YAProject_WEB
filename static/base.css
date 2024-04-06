@@ -6,16 +6,25 @@ nav{
     box-shadow: 0px 5px 5px white;
 }
 
+body{
+
+    background: url('img/main_picture_2.jpg') no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
 section{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
-    background: url('img/main_picture_3.jpg')no-repeat;
+    /* background: url('img/main_picture_3.jpg') no-repeat;
     background-size: 100% 100%;
+    background-attachment: fixed;*/
 }
-
+img{
+    src:url_for("static/img/sc_logo.png")}
 a h1{
     width: 100px;
     height: auto;
@@ -69,6 +78,7 @@ a .btn h6{
     color: blueviolet;
     top: -5px;
 }
+.dropdown-item{color:#000000}
 .container {
     position: relative;
     top: 25px

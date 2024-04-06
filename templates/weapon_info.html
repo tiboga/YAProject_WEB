@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table {
+            float: right;
+            margin: 20px;
+            border-collapse: collapse;
+            color: #FFFFFF;
+            border: #FFFFFF;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        .content {
+            margin: 20px;
+            color: #FFFFFF;
+        }
+        h2{
+        color: #FFFFFF;
+        margin: 10px 100px 20px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    {% for elem in dict.info %}
+    {% if not loop.last %}
+    <tr>
+        <th>{{elem.key}}</th>
+        {% if elem.value == "Новичок"%}
+        <th style="color: #4ad94b" >{{elem.value}}</th>
+        {% elif elem.value == "Сталкер"%}
+        <th style="color: #5555ff" >{{elem.value}}</th>
+        {% elif elem.value == "Ветеран"%}
+        <th style="color: #940394" >{{elem.value}}</th>
+        {% elif elem.value == "Мастер"%}
+        <th style="color: #d14849" >{{elem.value}}</th>
+        {% else %}
+        <th>{{elem.value}}</th>
+        {% endif%}
+    </tr>
+    {%endif%}
+    {% endfor %}
+</table>
+<h2>{{dict.name}}</h2>
+<div class="content">
+    {% for elem in dict.info %}
+    {% if loop.last %}
+    <p>{{elem.value}}</p>
+    {%endif%}
+    {% endfor %}
+</div>
+</body>
+</html>
+
+{% endblock %}

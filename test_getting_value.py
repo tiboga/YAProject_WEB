@@ -1,11 +1,11 @@
 import json
 import os
+import pprint
 import traceback
-from pprint import pprint
 
 sp = []
 for root, dirs, files in os.walk(
-        'E:\\TIBOPF\\PycharmProjects\\YAProject_WEB\\stalcraft-database-main\\ru\\items\\weapon\\pistol'):
+        'stalcraft-database-main\\ru\\items\\weapon'):
     for file in files:
         if file.endswith('.json'):
             sp.append('/'.join((os.path.join(root, file)).split('\\')))
@@ -14,74 +14,85 @@ language = 'ru'
 for e in sp:
     print(e)
     with open(e, 'r', encoding="UTF-8") as f:
-        diction = json.load(f)
+        original_diction = json.load(f)
     try:
-        name = diction['name']['lines']['ru']
-        # main_info = [{'key':elem['key']['lines'][language], 'value': elem['value']['lines'][language]} for elem in list(filter(lambda x: x != [], [elem['elements'] for elem in diction['infoBlocks'] if 'elements' in elem.keys()]))[0]]
-        try:
-            main_info = diction['infoBlocks'][0]['elements']
-        except:
-            main_info = []
-        try:
-            additional_info = diction['infoBlocks'][2]['elements']
-        except:
-            additional_info = []
-        try:
-            additional_characteristic_info = diction['infoBlocks'][3]['elements']
-        except:
-            additional_characteristic_info = []
-        try:
-            damage_info = diction['infoBlocks'][4]['elements']
-        except:
-            damage_info = []
-        try:
-            description = {'key': 'Краткое описание', 'value': diction['infoBlocks'][-1]['text']['lines'][language]}
-        except:
-            description = {}
-        out_main_info = []
-        out_additional_info = []
-        out_additional_characteristic_info = []
-        out_damage_info = []
-        for elem in main_info:
-            if elem['type'] == 'key-value':
-                out_main_info.append({'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-            elif elem['type'] == 'numeric':
-                out_main_info.append(
-                    {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        for elem in additional_info:
-            if elem['type'] == 'key-value':
-                out_additional_info.append(
-                    {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-            elif elem['type'] == 'numeric':
-                out_additional_info.append(
-                    {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        for elem in additional_characteristic_info:
-            if elem['type'] == 'key-value':
-                out_additional_characteristic_info.append(
-                    {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-            elif elem['type'] == 'numeric':
-                out_additional_characteristic_info.append(
-                    {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        for elem in damage_info:
-            if elem['type'] == 'key-value':
-                out_damage_info.append(
-                    {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-            elif elem['type'] == 'numeric':
-                out_damage_info.append(
-                    {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
+        name = original_diction['name']['lines']['ru']
+        info = []
+        if not os.path.isdir('./value'):
+            os.mkdir('./value')
+            print(True)
+        for elem in original_diction['infoBlocks']:
+            if elem['type'] == 'list':
+                tmp_diction = elem['elements']
             elif elem['type'] == 'text':
-                out_damage_info.append(
-                    {'key': elem['text']['lines'][language].split(':')[0], 'value': elem['text']['lines'][language]})
-        out_diction = {'Основная информация': out_main_info, 'Дополнительная информация': out_additional_info,
-                       'Характеристики': out_additional_characteristic_info, 'Информация об уроне': out_damage_info,
-                       'Описание': description}
+                tmp_diction = [elem['text']]
+            else:
+                tmp_diction = []
+            if tmp_diction:
+                out_sp = []
+                for tmp in tmp_diction:
+                    if tmp['type'] == 'key-value':
+                        out_sp.append(
+                            {'key': tmp['key']['lines'][language], 'value': tmp['value']['lines'][language]})
+                    elif tmp['type'] == 'numeric':
+                        out_sp.append(
+                            {'key': tmp['name']['lines'][language], 'value': tmp['formatted']['value'][language]})
+                    elif tmp['type'] == 'translation':
+                        out_sp.append(
+                            {'key': 'description',
+                             'value': tmp['lines'][language]})
+                info.extend(out_sp)
+        out_diction = {'name': name, 'info': info}
         path = '/'.join(e.split('/')[-4:])
         for i in range(1, 4):
-            tmp_path = '/'.join(path.split('/')[:i])
-            if not(os.path.isdir(tmp_path)):
+            tmp_path = './value/' + '/'.join(path.split('/')[:i])
+            if not (os.path.isdir(tmp_path)):
                 os.mkdir(tmp_path)
-        with open(f"{path}", 'w') as f:
+        with open(f"./value/{path}", 'w', encoding='UTF-8') as f:
             json.dump(out_diction, f, ensure_ascii=False)
+        # info = [elem['elements' if elem['type'] == 'list' else 'text'] for elem in original_diction['infoBlocks']]
+        # with open(f"test.json", 'w', encoding='UTF-8') as f:
+        #     json.dump(info, f, ensure_ascii=False)
+        # break
+        # out_main_info = []
+        # out_additional_info = []
+        # out_additional_characteristic_info = []
+        # out_damage_info = []
+        # for elem in main_info:
+        #     if elem['type'] == 'key-value':
+        #         out_main_info.append({'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
+        #     elif elem['type'] == 'numeric':
+        #         out_main_info.append(
+        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
+        # for elem in additional_info:
+        #     if elem['type'] == 'key-value':
+        #         out_additional_info.append(
+        #             {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
+        #     elif elem['type'] == 'numeric':
+        #         out_additional_info.append(
+        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
+        # for elem in additional_characteristic_info:
+        #     if elem['type'] == 'key-value':
+        #         out_additional_characteristic_info.append(
+        #             {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
+        #     elif elem['type'] == 'numeric':
+        #         out_additional_characteristic_info.append(
+        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
+        # for elem in damage_info:
+        #     if elem['type'] == 'key-value':
+        #         out_damage_info.append(
+        #             {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
+        #     elif elem['type'] == 'numeric':
+        #         out_damage_info.append(
+        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
+        #     elif elem['type'] == 'text':
+        #         out_damage_info.append(
+        #             {'key': elem['text']['lines'][language].split(':')[0], 'value': elem['text']['lines'][language]})
+        # out_diction = {'info':[{'Основная информация': out_main_info}, {'Дополнительная информация': out_additional_info},
+        #                {'Характеристики': out_additional_characteristic_info}, {'Информация об уроне': out_damage_info},
+        #                {'Описание': description}]}
+
+
     except:
         print(e, traceback.format_exc())
         n = input()

@@ -1,3 +1,5 @@
+import json
+
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify
 from flask_restful import Api
 import weapons_resources
@@ -54,6 +56,7 @@ def cookie_test():
                        max_age=60 * 60 * 24 * 365 * 2)
     return res
 
+
 @app.route('/weapons/<int:id>', methods=['GET', 'POST'])
 @app.route('/weapons/<fav>', methods=['GET', 'POST'])
 @app.route('/weapons')
@@ -61,7 +64,8 @@ def weapons(id=0, fav=False):
     db_sess = db_session.create_session()
     if current_user.is_authenticated:
         if fav == "favourite":
-            weapons = db_sess.query(Weapons).filter(((Weapons.user == current_user) | (Weapons.is_private != True)) & (Weapons.favourite == 0))
+            weapons = db_sess.query(Weapons).filter(
+                ((Weapons.user == current_user) | (Weapons.is_private != True)) & (Weapons.favourite == 0))
         else:
             weapons = db_sess.query(Weapons).filter(
                 (Weapons.user == current_user) | (Weapons.is_private != True))
@@ -69,8 +73,8 @@ def weapons(id=0, fav=False):
         weapons = db_sess.query(Weapons).filter(Weapons.is_private != True)
     if id != 0:
         weapon1 = db_sess.query(Weapons).filter(Weapons.id == id,
-                                        Weapons.user == current_user
-                                        ).first()
+                                                Weapons.user == current_user
+                                                ).first()
         if weapon1:
             if weapon1.favourite == 0:
                 weapon1.favourite = 1
@@ -78,7 +82,7 @@ def weapons(id=0, fav=False):
                 weapon1.favourite = 0
             db_sess.commit()
         else:
-            abort(404)      
+            abort(404)
         return redirect("/weapons")
     return render_template("weapons.html", new_weapon=weapons, fav=fav)
 
@@ -90,16 +94,17 @@ def armor(id=0, fav=False):
     db_sess = db_session.create_session()
     if current_user.is_authenticated:
         if fav == "favourite":
-            armor = db_sess.query(Armor).filter(((Armor.user == current_user) | (Armor.is_private != True)) & (Armor.favourite == 0))
+            armor = db_sess.query(Armor).filter(
+                ((Armor.user == current_user) | (Armor.is_private != True)) & (Armor.favourite == 0))
         else:
             armor = db_sess.query(Armor).filter(
                 (Armor.user == current_user) | (Armor.is_private != True))
     else:
-        armor = db_sess.query(Armor).filter(Armor.is_private != True) 
+        armor = db_sess.query(Armor).filter(Armor.is_private != True)
     if id != 0:
         armor1 = db_sess.query(Armor).filter(Armor.id == id,
-                                        Armor.user == current_user
-                                        ).first()
+                                             Armor.user == current_user
+                                             ).first()
         if armor1:
             if armor1.favourite == 0:
                 armor1.favourite = 1
@@ -107,13 +112,15 @@ def armor(id=0, fav=False):
                 armor1.favourite = 0
             db_sess.commit()
         else:
-            abort(404)      
+            abort(404)
         return redirect("/armor")
     return render_template("armor.html", new_armor=armor, fav=fav)
+
 
 @app.route('/')
 def index():
     return redirect('/weapons')
+
 
 @app.route('/new_weapon', methods=['GET', 'POST'])
 @login_required
@@ -133,6 +140,11 @@ def add_weapons():
                            form=form)
 
 
+@app.route('/weapon/<clas>/<name>')
+def weapon(clas, name):
+    with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
+        dict = json.load(f)
+    return render_template('weapon_info.html', dict=dict)
 @app.route('/new_weapon/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_weapons(id):
@@ -233,6 +245,7 @@ def edit_armor(id):
                            form=form
                            )
 
+
 @app.route('/armor_delete/<int:id>', methods=['GET', 'POST'])
 @login_required
 def armor_delete(id):
@@ -246,6 +259,7 @@ def armor_delete(id):
     else:
         abort(404)
     return redirect('/armor')
+
 
 @app.route("/session_test")
 def session_test():
