@@ -1,36 +1,24 @@
-* { 
-    list-style: none;
-    text-decoration: none;
+.btn-group {
+    width: 50%;
 }
-
-div ul li {
-    position: relative;
-    margin-left: 200px;
-    display: inline-block;
-}
-div ul li a {
-    padding: 15px;
-    color: white;
-    font-size: 22px;
+.btn-danger1{
     display: block;
-    text-decoration: none;
-}
-div ul li a:hover {
-
-    color: black;
-    background-color: #fff;
-    text-decoration: none;
-    border: 2px solid grey
-}
-div ul li ul {
+    border: none;
+    color: aqua;
+    font-size: large;
     position: absolute;
-    left: -200px;
-    width: 225px;
-    display: none;
+    left: 50%;
+    margin-right: 75px;
+    
 }
-div ul li ul li {
-    width: 100%;
+
+ul li {
+    right: 0px;
 }
-div ul li:hover ul {
-    display: block;
+.dropdown-item {
+    color: white;
+    
+}
+.dropdown-item:hover {
+    background-color: aqua;
 }

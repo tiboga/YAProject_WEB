@@ -145,6 +145,7 @@ def weapon(clas, name):
     with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
         dict = json.load(f)
     return render_template('weapon_info.html', dict=dict)
+
 @app.route('/new_weapon/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_weapons(id):
