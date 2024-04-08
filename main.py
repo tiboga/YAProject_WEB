@@ -1,7 +1,6 @@
 import json
 
-from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify
-from flask_restful import Api
+from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify, url_for
 import weapons_resources
 from data import db_session
 from data.users import User
@@ -14,7 +13,6 @@ from forms.user import LoginForm
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
 app = Flask(__name__)
-api = Api(app)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -141,10 +139,29 @@ def add_weapons():
 
 
 @app.route('/weapon/<clas>/<name>')
-def weapon(clas, name):
-    with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
-        dict = json.load(f)
-    return render_template('weapon_info.html', dict=dict)
+@app.route('/weapon/<name>')
+def weapon(name, clas=None):
+    img_url = ''
+    if not clas:
+        path = None
+        with open('map.json', 'r', encoding='UTF-8') as f:
+            tmp_dict = json.load(f)
+        if name in tmp_dict.keys():
+            path = tmp_dict[name]['paths']['json']
+        else:
+            for elem in tmp_dict.values():
+                if elem['additional_key'] == name:
+                    path = elem['paths']['json']
+                    img_url = elem['paths']['image']
+            if path:
+                with open(path, 'r', encoding="UTF-8") as f:
+                    diction = json.load(f)
+
+    else:
+        with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
+            diction = json.load(f)
+    return render_template('weapon_info.html', dict=diction, img_url=img_url)
+
 
 @app.route('/new_weapon/<int:id>', methods=['GET', 'POST'])
 @login_required
@@ -304,8 +321,8 @@ def register():
 
 def main():
     db_session.global_init("db/blogs.db")
-    api.add_resource(weapons_resources.WeaponsListResource, '/api/v2/weapons')
-    api.add_resource(weapons_resources.WeaponsResource, '/api/v2/weapons/<int:weapons_id>')
+    # api.add_resource(weapons_resources.WeaponsListResource, '/api/v2/weapons')
+    # api.add_resource(weapons_resources.WeaponsResource, '/api/v2/weapons/<int:weapons_id>')
     app.run()
 
 

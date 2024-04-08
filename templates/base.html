@@ -14,7 +14,7 @@
 </head>
 <header>
     <nav class="navbar navbar-light bg-light">
-        <a href="/"><img src="static/img/sc_logo.png"></a>
+        <a href="/"><img src="/static/img/sc_logo.png"></a>
         {% if current_user.is_authenticated %}
         <i class="fa-solid fa-user"></i><a href="/logout"><h2>{{ current_user.name }}</h2></a>
         {% else %}
@@ -33,7 +33,7 @@
                     <button type="button" class="btn btn-danger1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                       guns
                     </button>
-                    <ul class="dropdown-menu", style="background-color: transparent">
+                    <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">assault_rifle</a></li>
                       <li><a class="dropdown-item" href="#">device</a></li>
                       <li><a class="dropdown-item" href="#">heavy</a></li>
@@ -47,7 +47,7 @@
                     <button type="button" class="btn btn-danger1 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                         armors
                     </button>
-                      <ul class="dropdown-menu", style="background-color: transparent">
+                      <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">clothes</a></li>
                         <li><a class="dropdown-item" href="#">combat</a></li>
                         <li><a class="dropdown-item" href="#">combined</a></li>

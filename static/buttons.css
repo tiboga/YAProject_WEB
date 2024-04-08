@@ -22,3 +22,5 @@ ul li {
 .dropdown-item:hover {
     background-color: aqua;
 }
+.dropdown-item{color: rgb(24,255,195);}
+.dropdown-menu{background-color: rgba(0, 0, 0, 0.7);}
