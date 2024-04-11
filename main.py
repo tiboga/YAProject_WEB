@@ -172,7 +172,7 @@ def ret_class_of_weapon(clas):
     for elem in tmp_dict.values():
         if elem['paths']['json'].split("/")[-2] == clas:
             sp_of_a.append(
-                {'name': elem['additional_key'], 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0]})
+                {'name': elem['additional_key'], 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img":elem["paths"]['image']})
     return render_template('weapon_group.html', sp=sp_of_a)
 
 

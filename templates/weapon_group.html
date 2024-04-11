@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
+<head>
+    <style>
+        a{color:#A01F1F}
+        a:hover{color:#C60606}
+    </style>
+</head>
 <body>
 <div>
     {% for elem in sp%}
-        <a href="{{elem.href}}">{{elem.name}}</a>
+        <a href="{{elem.href}}">{{elem.name}}
+        <img src="{{elem.img}}"></a>
     {%endfor%}
 </div>
 </body>
