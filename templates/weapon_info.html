@@ -38,12 +38,20 @@
         aside > p {
           margin: 0.5rem;
         }
+        aside > table {
+        align: center
+          margin: 0.5rem;
+        }
+        .info{
+         border: 5px solid #20c997;
+         padding: 2px;
+        }
     </style>
 </head>
 <body>
 <p></p>
 <aside class="info">
-    <p align='center'><img class="item-img" src="{{img_url}}"></p>
+    <p align='center' class="item-img"><img src="{{img_url}}"></p>
     <table>
         {% for elem in dict.info %}
         {% if not loop.last %}
