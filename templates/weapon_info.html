@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        .description{width: 60%;}
         table {
             float: right;
             margin: 20px;
@@ -25,37 +26,54 @@
         color: #FFFFFF;
         margin: 10px 100px 20px;
         }
+                aside {
+          width: 40%;
+          padding-left: 0.5rem;
+          margin-left: 0.5rem;
+          float: right;
+          font-style: italic;
+          color: #29627e;
+        }
+
+        aside > p {
+          margin: 0.5rem;
+        }
     </style>
 </head>
 <body>
-<table>
-    <tr><th><img src="{{img_url}}"></th></tr>
-    {% for elem in dict.info %}
-    {% if not loop.last %}
-    <tr>
-        <th>{{elem.key}}</th>
-        {% if elem.value == "Новичок"%}
-        <th style="color: #4ad94b" >{{elem.value}}</th>
-        {% elif elem.value == "Сталкер"%}
-        <th style="color: #5555ff" >{{elem.value}}</th>
-        {% elif elem.value == "Ветеран"%}
-        <th style="color: #940394" >{{elem.value}}</th>
-        {% elif elem.value == "Мастер"%}
-        <th style="color: #d14849" >{{elem.value}}</th>
-        {% else %}
-        <th>{{elem.value}}</th>
-        {% endif%}
-    </tr>
-    {%endif%}
-    {% endfor %}
-</table>
-<h2>{{dict.name}}</h2>
-<div class="content">
-    {% for elem in dict.info %}
-    {% if loop.last %}
-    <p>{{elem.value}}</p>
-    {%endif%}
-    {% endfor %}
+<p></p>
+<aside class="info">
+    <p align='center'><img class="item-img" src="{{img_url}}"></p>
+    <table>
+        {% for elem in dict.info %}
+        {% if not loop.last %}
+        <tr>
+            <th>{{elem.key}}</th>
+            {% if elem.value == "Новичок"%}
+            <th style="color: #4ad94b">{{elem.value}}</th>
+            {% elif elem.value == "Сталкер"%}
+            <th style="color: #5555ff">{{elem.value}}</th>
+            {% elif elem.value == "Ветеран"%}
+            <th style="color: #940394">{{elem.value}}</th>
+            {% elif elem.value == "Мастер"%}
+            <th style="color: #d14849">{{elem.value}}</th>
+            {% else %}
+            <th>{{elem.value}}</th>
+            {% endif%}
+        </tr>
+        {%endif%}
+        {% endfor %}
+    </table>
+</aside>
+<div class="description">
+    <h2 align="center">{{dict.name}}</h2>
+    <div class="content">
+        {% for elem in dict.info %}
+        {% if loop.last %}
+        <p>{{elem.value}}</p>
+        {%endif%}
+        {% endfor %}
+    </div>
 </div>
 </body>
 </html>
