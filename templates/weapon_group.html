@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body>
+<div>
+    {% for elem in sp%}
+        <a href="{{elem.href}}">{{elem.name}}</a>
+    {%endfor%}
+</div>
+</body>
+{%endblock%}
