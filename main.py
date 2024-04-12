@@ -1,4 +1,5 @@
 import json
+from pprint import pprint
 
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify, url_for
 import weapons_resources
@@ -161,6 +162,18 @@ def weapon(name, clas=None):
         with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
             diction = json.load(f)
     return render_template('weapon_info.html', dict=diction, img_url=img_url)
+
+
+@app.route('/class_of_weapon/<clas>')
+def ret_class_of_weapon(clas):
+    with open('map.json', 'r', encoding='UTF-8') as f:
+        tmp_dict = json.load(f)
+    sp_of_a = []
+    for elem in tmp_dict.values():
+        if elem['paths']['json'].split("/")[-2] == clas:
+            sp_of_a.append(
+                {'name': elem['additional_key'], 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img":elem["paths"]['image']})
+    return render_template('weapon_group.html', sp=sp_of_a)
 
 
 @app.route('/new_weapon/<int:id>', methods=['GET', 'POST'])

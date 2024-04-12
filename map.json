@@ -1,0 +1,1808 @@
+{
+  "0r2g1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/0r2g1.png",
+      "json": "value/items/weapon/assault_rifle/0r2g1.json"
+    },
+    "additional_key": "9А-91"
+  },
+  "0r2zd": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/0r2zd.png",
+      "json": "value/items/weapon/assault_rifle/0r2zd.json"
+    },
+    "additional_key": "«Баланс»"
+  },
+  "0r3nd": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/0r3nd.png",
+      "json": "value/items/weapon/assault_rifle/0r3nd.json"
+    },
+    "additional_key": "Поношенная HK G3A1"
+  },
+  "1r731": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/1r731.png",
+      "json": "value/items/weapon/assault_rifle/1r731.json"
+    },
+    "additional_key": "Kbk wz. 88 Tantal"
+  },
+  "1r7g1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/1r7g1.png",
+      "json": "value/items/weapon/assault_rifle/1r7g1.json"
+    },
+    "additional_key": "Steyr AUG A3"
+  },
+  "1rd56": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/1rd56.png",
+      "json": "value/items/weapon/assault_rifle/1rd56.json"
+    },
+    "additional_key": "АКС-74"
+  },
+  "2odq0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/2odq0.png",
+      "json": "value/items/weapon/assault_rifle/2odq0.json"
+    },
+    "additional_key": "АК-203"
+  },
+  "2ony6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/2ony6.png",
+      "json": "value/items/weapon/assault_rifle/2ony6.json"
+    },
+    "additional_key": "IWI Tavor X95"
+  },
+  "3gn5g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/3gn5g.png",
+      "json": "value/items/weapon/assault_rifle/3gn5g.json"
+    },
+    "additional_key": "ТКБ-0146М"
+  },
+  "3gr6z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/3gr6z.png",
+      "json": "value/items/weapon/assault_rifle/3gr6z.json"
+    },
+    "additional_key": "M4A1 CQC"
+  },
+  "4q09p": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/4q09p.png",
+      "json": "value/items/weapon/assault_rifle/4q09p.json"
+    },
+    "additional_key": "HK G3A1"
+  },
+  "4qnwn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/4qnwn.png",
+      "json": "value/items/weapon/assault_rifle/4qnwn.json"
+    },
+    "additional_key": "ОЦ-14М «Шторм»"
+  },
+  "5ld1g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/5ld1g.png",
+      "json": "value/items/weapon/assault_rifle/5ld1g.json"
+    },
+    "additional_key": "ОЦ-14 «Гроза»"
+  },
+  "5ldkg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/5ldkg.png",
+      "json": "value/items/weapon/assault_rifle/5ldkg.json"
+    },
+    "additional_key": "АКМ"
+  },
+  "5ldwg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/5ldwg.png",
+      "json": "value/items/weapon/assault_rifle/5ldwg.json"
+    },
+    "additional_key": "АКС-74У"
+  },
+  "5ln40": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/5ln40.png",
+      "json": "value/items/weapon/assault_rifle/5ln40.json"
+    },
+    "additional_key": "LR-300"
+  },
+  "5lnw0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/5lnw0.png",
+      "json": "value/items/weapon/assault_rifle/5lnw0.json"
+    },
+    "additional_key": "FN FAL"
+  },
+  "6wr5j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/6wr5j.png",
+      "json": "value/items/weapon/assault_rifle/6wr5j.json"
+    },
+    "additional_key": "АК-15"
+  },
+  "7lnj7": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/7lnj7.png",
+      "json": "value/items/weapon/assault_rifle/7lnj7.json"
+    },
+    "additional_key": "SA-58 CTC"
+  },
+  "7lry3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/7lry3.png",
+      "json": "value/items/weapon/assault_rifle/7lry3.json"
+    },
+    "additional_key": "АМБ-17"
+  },
+  "7lrz3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/7lrz3.png",
+      "json": "value/items/weapon/assault_rifle/7lrz3.json"
+    },
+    "additional_key": "АК-103"
+  },
+  "969jz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/969jz.png",
+      "json": "value/items/weapon/assault_rifle/969jz.json"
+    },
+    "additional_key": "Steyr AUG A2"
+  },
+  "96my0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/96my0.png",
+      "json": "value/items/weapon/assault_rifle/96my0.json"
+    },
+    "additional_key": "АЛК-22 «Стрекоза»"
+  },
+  "dmjdn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/dmjdn.png",
+      "json": "value/items/weapon/assault_rifle/dmjdn.json"
+    },
+    "additional_key": "АК-308"
+  },
+  "dmjwn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/dmjwn.png",
+      "json": "value/items/weapon/assault_rifle/dmjwn.json"
+    },
+    "additional_key": "HK416"
+  },
+  "dmqg5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/dmqg5.png",
+      "json": "value/items/weapon/assault_rifle/dmqg5.json"
+    },
+    "additional_key": "АКМ «Тишина»"
+  },
+  "dmqk5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/dmqk5.png",
+      "json": "value/items/weapon/assault_rifle/dmqk5.json"
+    },
+    "additional_key": "АМ-17"
+  },
+  "g4060": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/g4060.png",
+      "json": "value/items/weapon/assault_rifle/g4060.json"
+    },
+    "additional_key": "L85A1"
+  },
+  "g4mdp": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/g4mdp.png",
+      "json": "value/items/weapon/assault_rifle/g4mdp.json"
+    },
+    "additional_key": "АК-12"
+  },
+  "j5l37": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/j5l37.png",
+      "json": "value/items/weapon/assault_rifle/j5l37.json"
+    },
+    "additional_key": "АЕК-971"
+  },
+  "j5l77": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/j5l77.png",
+      "json": "value/items/weapon/assault_rifle/j5l77.json"
+    },
+    "additional_key": "Поношенная L85A1"
+  },
+  "j5lk7": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/j5lk7.png",
+      "json": "value/items/weapon/assault_rifle/j5lk7.json"
+    },
+    "additional_key": "M16A3"
+  },
+  "j5od6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/j5od6.png",
+      "json": "value/items/weapon/assault_rifle/j5od6.json"
+    },
+    "additional_key": "FAMAS G2"
+  },
+  "knl30": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/knl30.png",
+      "json": "value/items/weapon/assault_rifle/knl30.json"
+    },
+    "additional_key": "FN F2000 Tactical"
+  },
+  "knl70": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/knl70.png",
+      "json": "value/items/weapon/assault_rifle/knl70.json"
+    },
+    "additional_key": "АКС чистильщика"
+  },
+  "lyl3j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/lyl3j.png",
+      "json": "value/items/weapon/assault_rifle/lyl3j.json"
+    },
+    "additional_key": "АШ-12"
+  },
+  "lyl7j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/lyl7j.png",
+      "json": "value/items/weapon/assault_rifle/lyl7j.json"
+    },
+    "additional_key": "M16A1"
+  },
+  "lyljj": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/lyljj.png",
+      "json": "value/items/weapon/assault_rifle/lyljj.json"
+    },
+    "additional_key": "M4 LB"
+  },
+  "m023j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/m023j.png",
+      "json": "value/items/weapon/assault_rifle/m023j.json"
+    },
+    "additional_key": "Поношенный SIG SG 550"
+  },
+  "n4md3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/n4md3.png",
+      "json": "value/items/weapon/assault_rifle/n4md3.json"
+    },
+    "additional_key": "HK XM8S"
+  },
+  "okv0o": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/okv0o.png",
+      "json": "value/items/weapon/assault_rifle/okv0o.json"
+    },
+    "additional_key": "M16A2"
+  },
+  "okv7o": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/okv7o.png",
+      "json": "value/items/weapon/assault_rifle/okv7o.json"
+    },
+    "additional_key": "АН-94 «Абакан»"
+  },
+  "p63d2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/p63d2.png",
+      "json": "value/items/weapon/assault_rifle/p63d2.json"
+    },
+    "additional_key": "HK417"
+  },
+  "p63g2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/p63g2.png",
+      "json": "value/items/weapon/assault_rifle/p63g2.json"
+    },
+    "additional_key": "Steyr AUG A1"
+  },
+  "p6r26": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/p6r26.png",
+      "json": "value/items/weapon/assault_rifle/p6r26.json"
+    },
+    "additional_key": "FN F2000"
+  },
+  "rw27g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/rw27g.png",
+      "json": "value/items/weapon/assault_rifle/rw27g.json"
+    },
+    "additional_key": "«Рапира»"
+  },
+  "rwrng": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/rwrng.png",
+      "json": "value/items/weapon/assault_rifle/rwrng.json"
+    },
+    "additional_key": "АН-94М «Абакан»"
+  },
+  "vj2zd": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/vj2zd.png",
+      "json": "value/items/weapon/assault_rifle/vj2zd.json"
+    },
+    "additional_key": "DSA-58"
+  },
+  "vjr1n": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/vjr1n.png",
+      "json": "value/items/weapon/assault_rifle/vjr1n.json"
+    },
+    "additional_key": "АК-74М"
+  },
+  "wj75o": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/wj75o.png",
+      "json": "value/items/weapon/assault_rifle/wj75o.json"
+    },
+    "additional_key": "FN SCAR-H"
+  },
+  "wjo4p": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/wjo4p.png",
+      "json": "value/items/weapon/assault_rifle/wjo4p.json"
+    },
+    "additional_key": "А-545"
+  },
+  "wjogp": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/wjogp.png",
+      "json": "value/items/weapon/assault_rifle/wjogp.json"
+    },
+    "additional_key": "SIG SG 550"
+  },
+  "y32lo": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/y32lo.png",
+      "json": "value/items/weapon/assault_rifle/y32lo.json"
+    },
+    "additional_key": "FN SCAR-L"
+  },
+  "y32wo": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/y32wo.png",
+      "json": "value/items/weapon/assault_rifle/y32wo.json"
+    },
+    "additional_key": "HK XM8"
+  },
+  "y375z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/y375z.png",
+      "json": "value/items/weapon/assault_rifle/y375z.json"
+    },
+    "additional_key": "АС «Вал»"
+  },
+  "zz2rn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/zz2rn.png",
+      "json": "value/items/weapon/assault_rifle/zz2rn.json"
+    },
+    "additional_key": "АК-105"
+  },
+  "zz7j2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/zz7j2.png",
+      "json": "value/items/weapon/assault_rifle/zz7j2.json"
+    },
+    "additional_key": "HK G36C"
+  },
+  "zz7y2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/assault_rifle/zz7y2.png",
+      "json": "value/items/weapon/assault_rifle/zz7y2.json"
+    },
+    "additional_key": "M4A1"
+  },
+  "1gmg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/1gmg.png",
+      "json": "value/items/weapon/device/1gmg.json"
+    },
+    "additional_key": "Детектор узкого диапазона «Бурят»"
+  },
+  "5wd1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/5wd1.png",
+      "json": "value/items/weapon/device/5wd1.json"
+    },
+    "additional_key": "СН-2 «Нога»"
+  },
+  "9j0l": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/9j0l.png",
+      "json": "value/items/weapon/device/9j0l.json"
+    },
+    "additional_key": "Детектор узкого диапазона «Свеча»"
+  },
+  "gd06": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/gd06.png",
+      "json": "value/items/weapon/device/gd06.json"
+    },
+    "additional_key": "СН-1 «Блин»"
+  },
+  "gdj6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/gdj6.png",
+      "json": "value/items/weapon/device/gdj6.json"
+    },
+    "additional_key": "Детектор узкого диапазона «Эльбрус»"
+  },
+  "yw7k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/yw7k.png",
+      "json": "value/items/weapon/device/yw7k.json"
+    },
+    "additional_key": "СН-2у «Ножка»"
+  },
+  "z47y": {
+    "paths": {
+      "image": "/static/value/icons/weapon/device/z47y.png",
+      "json": "value/items/weapon/device/z47y.json"
+    },
+    "additional_key": "СН-1у «Блинчик»"
+  },
+  "4q12o": {
+    "paths": {
+      "image": "/static/value/icons/weapon/heavy/4q12o.png",
+      "json": "value/items/weapon/heavy/4q12o.json"
+    },
+    "additional_key": "«Хладорез»"
+  },
+  "4qnyn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/heavy/4qnyn.png",
+      "json": "value/items/weapon/heavy/4qnyn.json"
+    },
+    "additional_key": "ПТРД-М"
+  },
+  "g4vj5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/heavy/g4vj5.png",
+      "json": "value/items/weapon/heavy/g4vj5.json"
+    },
+    "additional_key": "РГ-6"
+  },
+  "wj6m3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/heavy/wj6m3.png",
+      "json": "value/items/weapon/heavy/wj6m3.json"
+    },
+    "additional_key": "«Огниво»"
+  },
+  "zzl6m": {
+    "paths": {
+      "image": "/static/value/icons/weapon/heavy/zzl6m.png",
+      "json": "value/items/weapon/heavy/zzl6m.json"
+    },
+    "additional_key": "РПГ-7"
+  },
+  "zzlvm": {
+    "paths": {
+      "image": "/static/value/icons/weapon/heavy/zzlvm.png",
+      "json": "value/items/weapon/heavy/zzlvm.json"
+    },
+    "additional_key": "Огнемет"
+  },
+  "1rdnq": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/1rdnq.png",
+      "json": "value/items/weapon/machine_gun/1rdnq.json"
+    },
+    "additional_key": "ДП"
+  },
+  "2onz6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/2onz6.png",
+      "json": "value/items/weapon/machine_gun/2onz6.json"
+    },
+    "additional_key": "РПК-16"
+  },
+  "4q0rl": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/4q0rl.png",
+      "json": "value/items/weapon/machine_gun/4q0rl.json"
+    },
+    "additional_key": "Поношенный ПКП"
+  },
+  "5lnq4": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/5lnq4.png",
+      "json": "value/items/weapon/machine_gun/5lnq4.json"
+    },
+    "additional_key": "MG 42"
+  },
+  "g405g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/g405g.png",
+      "json": "value/items/weapon/machine_gun/g405g.json"
+    },
+    "additional_key": "РПК-74"
+  },
+  "g407g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/g407g.png",
+      "json": "value/items/weapon/machine_gun/g407g.json"
+    },
+    "additional_key": "L86A1"
+  },
+  "knl43": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/knl43.png",
+      "json": "value/items/weapon/machine_gun/knl43.json"
+    },
+    "additional_key": "Поношенная L86A1"
+  },
+  "rw255": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/rw255.png",
+      "json": "value/items/weapon/machine_gun/rw255.json"
+    },
+    "additional_key": "M249 SAW"
+  },
+  "wj7nd": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/wj7nd.png",
+      "json": "value/items/weapon/machine_gun/wj7nd.json"
+    },
+    "additional_key": "РПЛ-20"
+  },
+  "wj7qo": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/wj7qo.png",
+      "json": "value/items/weapon/machine_gun/wj7qo.json"
+    },
+    "additional_key": "РПК"
+  },
+  "zz2g9": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/zz2g9.png",
+      "json": "value/items/weapon/machine_gun/zz2g9.json"
+    },
+    "additional_key": "ПКП «Печенег»"
+  },
+  "zz7m9": {
+    "paths": {
+      "image": "/static/value/icons/weapon/machine_gun/zz7m9.png",
+      "json": "value/items/weapon/machine_gun/zz7m9.json"
+    },
+    "additional_key": "РПД"
+  },
+  "0rq2k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/0rq2k.png",
+      "json": "value/items/weapon/melee/0rq2k.json"
+    },
+    "additional_key": "Ледоруб"
+  },
+  "0rqkk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/0rqkk.png",
+      "json": "value/items/weapon/melee/0rqkk.json"
+    },
+    "additional_key": "«Пламенный привет»"
+  },
+  "0rqqk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/0rqqk.png",
+      "json": "value/items/weapon/melee/0rqqk.json"
+    },
+    "additional_key": "УВСР"
+  },
+  "1rj7r": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/1rj7r.png",
+      "json": "value/items/weapon/melee/1rj7r.json"
+    },
+    "additional_key": "Изделие 6Х4"
+  },
+  "1rjjr": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/1rjjr.png",
+      "json": "value/items/weapon/melee/1rjjr.json"
+    },
+    "additional_key": "Старый серп"
+  },
+  "1rjqr": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/1rjqr.png",
+      "json": "value/items/weapon/melee/1rjqr.json"
+    },
+    "additional_key": "Мясницкий крюк"
+  },
+  "1rjvr": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/1rjvr.png",
+      "json": "value/items/weapon/melee/1rjvr.json"
+    },
+    "additional_key": "«Гладиус»"
+  },
+  "2ollv": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/2ollv.png",
+      "json": "value/items/weapon/melee/2ollv.json"
+    },
+    "additional_key": "Классический M9"
+  },
+  "2olnv": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/2olnv.png",
+      "json": "value/items/weapon/melee/2olnv.json"
+    },
+    "additional_key": "Бита с гвоздями"
+  },
+  "3g991": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/3g991.png",
+      "json": "value/items/weapon/melee/3g991.json"
+    },
+    "additional_key": "Мясницкий нож"
+  },
+  "3g9n1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/3g9n1.png",
+      "json": "value/items/weapon/melee/3g9n1.json"
+    },
+    "additional_key": "Алюминиевая бита"
+  },
+  "4q11j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/4q11j.png",
+      "json": "value/items/weapon/melee/4q11j.json"
+    },
+    "additional_key": "Нож из шипа"
+  },
+  "4q1nj": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/4q1nj.png",
+      "json": "value/items/weapon/melee/4q1nj.json"
+    },
+    "additional_key": "Кукри"
+  },
+  "5lggo": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/5lggo.png",
+      "json": "value/items/weapon/melee/5lggo.json"
+    },
+    "additional_key": "Огненная бритва"
+  },
+  "5lgno": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/5lgno.png",
+      "json": "value/items/weapon/melee/5lgno.json"
+    },
+    "additional_key": "Glock Feldmesser 78"
+  },
+  "5lgvo": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/5lgvo.png",
+      "json": "value/items/weapon/melee/5lgvo.json"
+    },
+    "additional_key": "Синобигатана"
+  },
+  "6wz1n": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/6wz1n.png",
+      "json": "value/items/weapon/melee/6wz1n.json"
+    },
+    "additional_key": "«Флюорит»"
+  },
+  "6wz6n": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/6wz6n.png",
+      "json": "value/items/weapon/melee/6wz6n.json"
+    },
+    "additional_key": "Мачете Survival SP8 Ontario"
+  },
+  "6wzzn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/6wzzn.png",
+      "json": "value/items/weapon/melee/6wzzn.json"
+    },
+    "additional_key": "Едкая пила"
+  },
+  "7l559": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/7l559.png",
+      "json": "value/items/weapon/melee/7l559.json"
+    },
+    "additional_key": "Нож с обратным хватом"
+  },
+  "7l5g9": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/7l5g9.png",
+      "json": "value/items/weapon/melee/7l5g9.json"
+    },
+    "additional_key": "«Эндшпиль»"
+  },
+  "7l5n9": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/7l5n9.png",
+      "json": "value/items/weapon/melee/7l5n9.json"
+    },
+    "additional_key": "Тесак"
+  },
+  "96w5q": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/96w5q.png",
+      "json": "value/items/weapon/melee/96w5q.json"
+    },
+    "additional_key": "«Рвач»"
+  },
+  "96w9q": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/96w9q.png",
+      "json": "value/items/weapon/melee/96w9q.json"
+    },
+    "additional_key": "Охотничий нож"
+  },
+  "96wwq": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/96wwq.png",
+      "json": "value/items/weapon/melee/96wwq.json"
+    },
+    "additional_key": "Кусок трубы"
+  },
+  "dmvjg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/dmvjg.png",
+      "json": "value/items/weapon/melee/dmvjg.json"
+    },
+    "additional_key": "Телескопическая дубинка"
+  },
+  "dmvog": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/dmvog.png",
+      "json": "value/items/weapon/melee/dmvog.json"
+    },
+    "additional_key": "Тактический нож Ka-Bar BKR3"
+  },
+  "dmvvg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/dmvvg.png",
+      "json": "value/items/weapon/melee/dmvvg.json"
+    },
+    "additional_key": "«Друг болотника»"
+  },
+  "g4vmn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/g4vmn.png",
+      "json": "value/items/weapon/melee/g4vmn.json"
+    },
+    "additional_key": "Монтировка"
+  },
+  "g4vvn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/g4vvn.png",
+      "json": "value/items/weapon/melee/g4vvn.json"
+    },
+    "additional_key": "Саперная лопата"
+  },
+  "j5vol": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/j5vol.png",
+      "json": "value/items/weapon/melee/j5vol.json"
+    },
+    "additional_key": "Танто с кольцом"
+  },
+  "j5vvl": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/j5vvl.png",
+      "json": "value/items/weapon/melee/j5vvl.json"
+    },
+    "additional_key": "Тесак военсталов"
+  },
+  "knvmj": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/knvmj.png",
+      "json": "value/items/weapon/melee/knvmj.json"
+    },
+    "additional_key": "Jagdkommando"
+  },
+  "knvvj": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/knvvj.png",
+      "json": "value/items/weapon/melee/knvvj.json"
+    },
+    "additional_key": "Ледяной кукри"
+  },
+  "knvwj": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/knvwj.png",
+      "json": "value/items/weapon/melee/knvwj.json"
+    },
+    "additional_key": "Антитеррор"
+  },
+  "lyv22": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/lyv22.png",
+      "json": "value/items/weapon/melee/lyv22.json"
+    },
+    "additional_key": "Охотничий мачете"
+  },
+  "lyvv2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/lyvv2.png",
+      "json": "value/items/weapon/melee/lyvv2.json"
+    },
+    "additional_key": "Твичер"
+  },
+  "m0v5k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/m0v5k.png",
+      "json": "value/items/weapon/melee/m0v5k.json"
+    },
+    "additional_key": "Костяной нож"
+  },
+  "m0vmk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/m0vmk.png",
+      "json": "value/items/weapon/melee/m0vmk.json"
+    },
+    "additional_key": "Топор"
+  },
+  "m0vvk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/m0vvk.png",
+      "json": "value/items/weapon/melee/m0vvk.json"
+    },
+    "additional_key": "НР-43"
+  },
+  "n4229": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/n4229.png",
+      "json": "value/items/weapon/melee/n4229.json"
+    },
+    "additional_key": "Керамбит из когтя"
+  },
+  "n42m9": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/n42m9.png",
+      "json": "value/items/weapon/melee/n42m9.json"
+    },
+    "additional_key": "Мачете «ЭМЧес»"
+  },
+  "n42y9": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/n42y9.png",
+      "json": "value/items/weapon/melee/n42y9.json"
+    },
+    "additional_key": "Керамбит Steel Tiger"
+  },
+  "ok995": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/ok995.png",
+      "json": "value/items/weapon/melee/ok995.json"
+    },
+    "additional_key": "Диверсионный нож"
+  },
+  "ok9m5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/ok9m5.png",
+      "json": "value/items/weapon/melee/ok9m5.json"
+    },
+    "additional_key": "Молоток"
+  },
+  "ok9w5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/ok9w5.png",
+      "json": "value/items/weapon/melee/ok9w5.json"
+    },
+    "additional_key": "Мизерикорд"
+  },
+  "p611d": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/p611d.png",
+      "json": "value/items/weapon/melee/p611d.json"
+    },
+    "additional_key": "Шипастая дубинка"
+  },
+  "p613d": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/p613d.png",
+      "json": "value/items/weapon/melee/p613d.json"
+    },
+    "additional_key": "Штык-нож M9"
+  },
+  "p614d": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/p614d.png",
+      "json": "value/items/weapon/melee/p614d.json"
+    },
+    "additional_key": "Боевой нож «Катран-1»"
+  },
+  "qjg24": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/qjg24.png",
+      "json": "value/items/weapon/melee/qjg24.json"
+    },
+    "additional_key": "Саперная лопата"
+  },
+  "qjgg4": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/qjgg4.png",
+      "json": "value/items/weapon/melee/qjgg4.json"
+    },
+    "additional_key": "Ледяной ледоруб"
+  },
+  "qjgr4": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/qjgr4.png",
+      "json": "value/items/weapon/melee/qjgr4.json"
+    },
+    "additional_key": "Боевой топор Русов"
+  },
+  "rwz2z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/rwz2z.png",
+      "json": "value/items/weapon/melee/rwz2z.json"
+    },
+    "additional_key": "Русский штык"
+  },
+  "rwzqz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/rwzqz.png",
+      "json": "value/items/weapon/melee/rwzqz.json"
+    },
+    "additional_key": "Ритуальный топор"
+  },
+  "rwzzz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/rwzzz.png",
+      "json": "value/items/weapon/melee/rwzzz.json"
+    },
+    "additional_key": "Нож 6Х9"
+  },
+  "vj427": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/vj427.png",
+      "json": "value/items/weapon/melee/vj427.json"
+    },
+    "additional_key": "M48 Tomahawk"
+  },
+  "vj497": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/vj497.png",
+      "json": "value/items/weapon/melee/vj497.json"
+    },
+    "additional_key": "Казачья шашка"
+  },
+  "wj66z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/wj66z.png",
+      "json": "value/items/weapon/melee/wj66z.json"
+    },
+    "additional_key": "Прижигатель"
+  },
+  "wj67z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/wj67z.png",
+      "json": "value/items/weapon/melee/wj67z.json"
+    },
+    "additional_key": "КО-1"
+  },
+  "y3j20": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/y3j20.png",
+      "json": "value/items/weapon/melee/y3j20.json"
+    },
+    "additional_key": "Gerber Downrange Tomahawk"
+  },
+  "y3jj0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/y3jj0.png",
+      "json": "value/items/weapon/melee/y3jj0.json"
+    },
+    "additional_key": "Кислотная бритва"
+  },
+  "y3jp0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/y3jp0.png",
+      "json": "value/items/weapon/melee/y3jp0.json"
+    },
+    "additional_key": "Кувалда"
+  },
+  "zzl2k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/zzl2k.png",
+      "json": "value/items/weapon/melee/zzl2k.json"
+    },
+    "additional_key": "ОЦ-04"
+  },
+  "zzllk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/melee/zzllk.png",
+      "json": "value/items/weapon/melee/zzllk.json"
+    },
+    "additional_key": "Бритва"
+  },
+  "1r77r": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/1r77r.png",
+      "json": "value/items/weapon/pistol/1r77r.json"
+    },
+    "additional_key": "Форт-12"
+  },
+  "1r7dr": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/1r7dr.png",
+      "json": "value/items/weapon/pistol/1r7dr.json"
+    },
+    "additional_key": "ПМ"
+  },
+  "1rj9g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/1rj9g.png",
+      "json": "value/items/weapon/pistol/1rj9g.json"
+    },
+    "additional_key": "ПМ вечного новичка"
+  },
+  "4qn6j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/4qn6j.png",
+      "json": "value/items/weapon/pistol/4qn6j.json"
+    },
+    "additional_key": "ОЦ-33 «Пернач»"
+  },
+  "5ln9o": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/5ln9o.png",
+      "json": "value/items/weapon/pistol/5ln9o.json"
+    },
+    "additional_key": "Glock 17"
+  },
+  "5lngo": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/5lngo.png",
+      "json": "value/items/weapon/pistol/5lngo.json"
+    },
+    "additional_key": "Mauser C96"
+  },
+  "969mq": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/969mq.png",
+      "json": "value/items/weapon/pistol/969mq.json"
+    },
+    "additional_key": "ПБ"
+  },
+  "dmjog": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/dmjog.png",
+      "json": "value/items/weapon/pistol/dmjog.json"
+    },
+    "additional_key": "Cobra Two-Tone"
+  },
+  "g4m0n": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/g4m0n.png",
+      "json": "value/items/weapon/pistol/g4m0n.json"
+    },
+    "additional_key": "ТТ"
+  },
+  "g4mgp": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/g4mgp.png",
+      "json": "value/items/weapon/pistol/g4mgp.json"
+    },
+    "additional_key": "IMI Micro Uzi"
+  },
+  "g4mmn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/g4mmn.png",
+      "json": "value/items/weapon/pistol/g4mmn.json"
+    },
+    "additional_key": "Walther P99"
+  },
+  "g4mqp": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/g4mqp.png",
+      "json": "value/items/weapon/pistol/g4mqp.json"
+    },
+    "additional_key": "АПС"
+  },
+  "g4mvn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/g4mvn.png",
+      "json": "value/items/weapon/pistol/g4mvn.json"
+    },
+    "additional_key": "Beretta 92FS"
+  },
+  "g4vk6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/g4vk6.png",
+      "json": "value/items/weapon/pistol/g4vk6.json"
+    },
+    "additional_key": "«Мечта»"
+  },
+  "j5or6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/j5or6.png",
+      "json": "value/items/weapon/pistol/j5or6.json"
+    },
+    "additional_key": "Glock 18C"
+  },
+  "j5ovl": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/j5ovl.png",
+      "json": "value/items/weapon/pistol/j5ovl.json"
+    },
+    "additional_key": "Поношенный Colt Python"
+  },
+  "knmgj": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/knmgj.png",
+      "json": "value/items/weapon/pistol/knmgj.json"
+    },
+    "additional_key": "Colt Python"
+  },
+  "ly2v2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/ly2v2.png",
+      "json": "value/items/weapon/pistol/ly2v2.json"
+    },
+    "additional_key": "Desert Eagle Mark VII"
+  },
+  "ly2z2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/ly2z2.png",
+      "json": "value/items/weapon/pistol/ly2z2.json"
+    },
+    "additional_key": "РШ-12"
+  },
+  "m0m5k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/m0m5k.png",
+      "json": "value/items/weapon/pistol/m0m5k.json"
+    },
+    "additional_key": "SIG Sauer P320"
+  },
+  "n4m93": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/n4m93.png",
+      "json": "value/items/weapon/pistol/n4m93.json"
+    },
+    "additional_key": "МР-412"
+  },
+  "rwzmv": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/rwzmv.png",
+      "json": "value/items/weapon/pistol/rwzmv.json"
+    },
+    "additional_key": "«Пчела»"
+  },
+  "wj71z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/wj71z.png",
+      "json": "value/items/weapon/pistol/wj71z.json"
+    },
+    "additional_key": "СР-1 «Гюрза»"
+  },
+  "y32j0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/y32j0.png",
+      "json": "value/items/weapon/pistol/y32j0.json"
+    },
+    "additional_key": "Beretta 93R"
+  },
+  "y32po": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/y32po.png",
+      "json": "value/items/weapon/pistol/y32po.json"
+    },
+    "additional_key": "Ingram MAC-10"
+  },
+  "y32z0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/y32z0.png",
+      "json": "value/items/weapon/pistol/y32z0.json"
+    },
+    "additional_key": "Desert Eagle Mark XIX"
+  },
+  "zz22k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/zz22k.png",
+      "json": "value/items/weapon/pistol/zz22k.json"
+    },
+    "additional_key": "Р-92"
+  },
+  "zz25k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/zz25k.png",
+      "json": "value/items/weapon/pistol/zz25k.json"
+    },
+    "additional_key": "SW1911"
+  },
+  "zz2lk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/zz2lk.png",
+      "json": "value/items/weapon/pistol/zz2lk.json"
+    },
+    "additional_key": "Browning Hi-Power"
+  },
+  "zz2pn": {
+    "paths": {
+      "image": "/static/value/icons/weapon/pistol/zz2pn.png",
+      "json": "value/items/weapon/pistol/zz2pn.json"
+    },
+    "additional_key": "ПММ"
+  },
+  "0r211": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/0r211.png",
+      "json": "value/items/weapon/shotgun_rifle/0r211.json"
+    },
+    "additional_key": "Crye Precision SIX12"
+  },
+  "1r742": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/1r742.png",
+      "json": "value/items/weapon/shotgun_rifle/1r742.json"
+    },
+    "additional_key": "БМ-16"
+  },
+  "4qn2o": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/4qn2o.png",
+      "json": "value/items/weapon/shotgun_rifle/4qn2o.json"
+    },
+    "additional_key": "Protecta"
+  },
+  "5ln0q": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/5ln0q.png",
+      "json": "value/items/weapon/shotgun_rifle/5ln0q.json"
+    },
+    "additional_key": "Shorty 590"
+  },
+  "5ln7q": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/5ln7q.png",
+      "json": "value/items/weapon/shotgun_rifle/5ln7q.json"
+    },
+    "additional_key": "Сайга-12К"
+  },
+  "6w64y": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/6w64y.png",
+      "json": "value/items/weapon/shotgun_rifle/6w64y.json"
+    },
+    "additional_key": "Grizzly 8.5"
+  },
+  "969ky": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/969ky.png",
+      "json": "value/items/weapon/shotgun_rifle/969ky.json"
+    },
+    "additional_key": "Обрез БМ-16"
+  },
+  "g4mz5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/g4mz5.png",
+      "json": "value/items/weapon/shotgun_rifle/g4mz5.json"
+    },
+    "additional_key": "ТОЗ-34"
+  },
+  "j5o9g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/j5o9g.png",
+      "json": "value/items/weapon/shotgun_rifle/j5o9g.json"
+    },
+    "additional_key": "ОЦ-62"
+  },
+  "ly2m1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/ly2m1.png",
+      "json": "value/items/weapon/shotgun_rifle/ly2m1.json"
+    },
+    "additional_key": "M1014"
+  },
+  "m0mz2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/m0mz2.png",
+      "json": "value/items/weapon/shotgun_rifle/m0mz2.json"
+    },
+    "additional_key": "M1014 Breacher"
+  },
+  "qj253": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/qj253.png",
+      "json": "value/items/weapon/shotgun_rifle/qj253.json"
+    },
+    "additional_key": "Chiappa Triple Crown"
+  },
+  "qj2zk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/qj2zk.png",
+      "json": "value/items/weapon/shotgun_rifle/qj2zk.json"
+    },
+    "additional_key": "AA-12"
+  },
+  "rw2ky": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/rw2ky.png",
+      "json": "value/items/weapon/shotgun_rifle/rw2ky.json"
+    },
+    "additional_key": "МЦ-255"
+  },
+  "wj7v3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/wj7v3.png",
+      "json": "value/items/weapon/shotgun_rifle/wj7v3.json"
+    },
+    "additional_key": "РМО-93"
+  },
+  "y32o3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/y32o3.png",
+      "json": "value/items/weapon/shotgun_rifle/y32o3.json"
+    },
+    "additional_key": "МР-153"
+  },
+  "y32v3": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/y32v3.png",
+      "json": "value/items/weapon/shotgun_rifle/y32v3.json"
+    },
+    "additional_key": "МР-133"
+  },
+  "zz29n": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/zz29n.png",
+      "json": "value/items/weapon/shotgun_rifle/zz29n.json"
+    },
+    "additional_key": "Cobray Terminator"
+  },
+  "zz2nm": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/zz2nm.png",
+      "json": "value/items/weapon/shotgun_rifle/zz2nm.json"
+    },
+    "additional_key": "Mossberg 590A1"
+  },
+  "zz2vm": {
+    "paths": {
+      "image": "/static/value/icons/weapon/shotgun_rifle/zz2vm.png",
+      "json": "value/items/weapon/shotgun_rifle/zz2vm.json"
+    },
+    "additional_key": "Franchi SPAS-12"
+  },
+  "1r79g": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/1r79g.png",
+      "json": "value/items/weapon/sniper_rifle/1r79g.json"
+    },
+    "additional_key": "СКТ-40"
+  },
+  "1r7rg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/1r7rg.png",
+      "json": "value/items/weapon/sniper_rifle/1r7rg.json"
+    },
+    "additional_key": "Карабин Мосина"
+  },
+  "4qn7r": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/4qn7r.png",
+      "json": "value/items/weapon/sniper_rifle/4qn7r.json"
+    },
+    "additional_key": "CR-380"
+  },
+  "4qnkr": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/4qnkr.png",
+      "json": "value/items/weapon/sniper_rifle/4qnkr.json"
+    },
+    "additional_key": "Steyr Scout"
+  },
+  "4qnor": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/4qnor.png",
+      "json": "value/items/weapon/sniper_rifle/4qnor.json"
+    },
+    "additional_key": "Поношенная СВД"
+  },
+  "5ln51": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/5ln51.png",
+      "json": "value/items/weapon/sniper_rifle/5ln51.json"
+    },
+    "additional_key": "Поношенная СВТ-40"
+  },
+  "5lno1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/5lno1.png",
+      "json": "value/items/weapon/sniper_rifle/5lno1.json"
+    },
+    "additional_key": "СВУ"
+  },
+  "5lnp0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/5lnp0.png",
+      "json": "value/items/weapon/sniper_rifle/5lnp0.json"
+    },
+    "additional_key": "СОК-94"
+  },
+  "5lny1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/5lny1.png",
+      "json": "value/items/weapon/sniper_rifle/5lny1.json"
+    },
+    "additional_key": "M40A5"
+  },
+  "7lnk7": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/7lnk7.png",
+      "json": "value/items/weapon/sniper_rifle/7lnk7.json"
+    },
+    "additional_key": "МЦ-116М"
+  },
+  "9696l": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/9696l.png",
+      "json": "value/items/weapon/sniper_rifle/9696l.json"
+    },
+    "additional_key": "Поношенный СКС"
+  },
+  "g4m2p": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/g4m2p.png",
+      "json": "value/items/weapon/sniper_rifle/g4m2p.json"
+    },
+    "additional_key": "Винтовка Мосина"
+  },
+  "g4m46": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/g4m46.png",
+      "json": "value/items/weapon/sniper_rifle/g4m46.json"
+    },
+    "additional_key": "СКС"
+  },
+  "g4mk6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/g4mk6.png",
+      "json": "value/items/weapon/sniper_rifle/g4mk6.json"
+    },
+    "additional_key": "СВД"
+  },
+  "g4mn6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/g4mn6.png",
+      "json": "value/items/weapon/sniper_rifle/g4mn6.json"
+    },
+    "additional_key": "Winchester M70"
+  },
+  "j5oq0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/j5oq0.png",
+      "json": "value/items/weapon/sniper_rifle/j5oq0.json"
+    },
+    "additional_key": "FG-42 «Хлыст»"
+  },
+  "knm0v": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/knm0v.png",
+      "json": "value/items/weapon/sniper_rifle/knm0v.json"
+    },
+    "additional_key": "СВ-98"
+  },
+  "knm5y": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/knm5y.png",
+      "json": "value/items/weapon/sniper_rifle/knm5y.json"
+    },
+    "additional_key": "Поношенная M1A"
+  },
+  "knm6y": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/knm6y.png",
+      "json": "value/items/weapon/sniper_rifle/knm6y.json"
+    },
+    "additional_key": "Mauser 98k"
+  },
+  "knmdv": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/knmdv.png",
+      "json": "value/items/weapon/sniper_rifle/knmdv.json"
+    },
+    "additional_key": "Гаусс-пушка"
+  },
+  "knmpy": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/knmpy.png",
+      "json": "value/items/weapon/sniper_rifle/knmpy.json"
+    },
+    "additional_key": "ВСС «Винторез»"
+  },
+  "ly29k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/ly29k.png",
+      "json": "value/items/weapon/sniper_rifle/ly29k.json"
+    },
+    "additional_key": "Поношенная L96A1"
+  },
+  "m0mo7": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/m0mo7.png",
+      "json": "value/items/weapon/sniper_rifle/m0mo7.json"
+    },
+    "additional_key": "ВСК-94"
+  },
+  "okm20": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/okm20.png",
+      "json": "value/items/weapon/sniper_rifle/okm20.json"
+    },
+    "additional_key": "HK PSG1"
+  },
+  "qj23j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/qj23j.png",
+      "json": "value/items/weapon/sniper_rifle/qj23j.json"
+    },
+    "additional_key": "МЦ-558"
+  },
+  "qj26k": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/qj26k.png",
+      "json": "value/items/weapon/sniper_rifle/qj26k.json"
+    },
+    "additional_key": "FN SCAR SSR"
+  },
+  "rw23l": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/rw23l.png",
+      "json": "value/items/weapon/sniper_rifle/rw23l.json"
+    },
+    "additional_key": "«Лавина»"
+  },
+  "rw26v": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/rw26v.png",
+      "json": "value/items/weapon/sniper_rifle/rw26v.json"
+    },
+    "additional_key": "ОТЛ-03 «Карбач»"
+  },
+  "rw2d5": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/rw2d5.png",
+      "json": "value/items/weapon/sniper_rifle/rw2d5.json"
+    },
+    "additional_key": "McMillan CS5"
+  },
+  "wj72d": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/wj72d.png",
+      "json": "value/items/weapon/sniper_rifle/wj72d.json"
+    },
+    "additional_key": "АВТ-40"
+  },
+  "wj732": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/wj732.png",
+      "json": "value/items/weapon/sniper_rifle/wj732.json"
+    },
+    "additional_key": "СВТ-40"
+  },
+  "wj792": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/wj792.png",
+      "json": "value/items/weapon/sniper_rifle/wj792.json"
+    },
+    "additional_key": "Alpine TPG-1"
+  },
+  "wj7l2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/wj7l2.png",
+      "json": "value/items/weapon/sniper_rifle/wj7l2.json"
+    },
+    "additional_key": "L96A1"
+  },
+  "y32gk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/y32gk.png",
+      "json": "value/items/weapon/sniper_rifle/y32gk.json"
+    },
+    "additional_key": "Поношенная M40A5"
+  },
+  "y32nk": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/y32nk.png",
+      "json": "value/items/weapon/sniper_rifle/y32nk.json"
+    },
+    "additional_key": "WA2000"
+  },
+  "zz23y": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/zz23y.png",
+      "json": "value/items/weapon/sniper_rifle/zz23y.json"
+    },
+    "additional_key": "Поношенный Winchester M70"
+  },
+  "zz24n": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/zz24n.png",
+      "json": "value/items/weapon/sniper_rifle/zz24n.json"
+    },
+    "additional_key": "SIG SG 550 Sniper"
+  },
+  "zz2ky": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/zz2ky.png",
+      "json": "value/items/weapon/sniper_rifle/zz2ky.json"
+    },
+    "additional_key": "ВСС-М «Винторез»"
+  },
+  "zz2wy": {
+    "paths": {
+      "image": "/static/value/icons/weapon/sniper_rifle/zz2wy.png",
+      "json": "value/items/weapon/sniper_rifle/zz2wy.json"
+    },
+    "additional_key": "M1A FA"
+  },
+  "1r756": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/1r756.png",
+      "json": "value/items/weapon/submachine_gun/1r756.json"
+    },
+    "additional_key": "«Гадюка»"
+  },
+  "1r7v1": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/1r7v1.png",
+      "json": "value/items/weapon/submachine_gun/1r7v1.json"
+    },
+    "additional_key": "IMI Mini Uzi"
+  },
+  "1rdg6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/1rdg6.png",
+      "json": "value/items/weapon/submachine_gun/1rdg6.json"
+    },
+    "additional_key": "HK MP5"
+  },
+  "2od90": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/2od90.png",
+      "json": "value/items/weapon/submachine_gun/2od90.json"
+    },
+    "additional_key": "Scorpion EVO III"
+  },
+  "3gr1z": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/3gr1z.png",
+      "json": "value/items/weapon/submachine_gun/3gr1z.json"
+    },
+    "additional_key": "SIG MPX"
+  },
+  "4q0lp": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/4q0lp.png",
+      "json": "value/items/weapon/submachine_gun/4q0lp.json"
+    },
+    "additional_key": "ПП-2000"
+  },
+  "5ldrg": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/5ldrg.png",
+      "json": "value/items/weapon/submachine_gun/5ldrg.json"
+    },
+    "additional_key": "FN P90"
+  },
+  "5lnv0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/5lnv0.png",
+      "json": "value/items/weapon/submachine_gun/5lnv0.json"
+    },
+    "additional_key": "HK MP5K"
+  },
+  "969r0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/969r0.png",
+      "json": "value/items/weapon/submachine_gun/969r0.json"
+    },
+    "additional_key": "«Цунами»"
+  },
+  "969vz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/969vz.png",
+      "json": "value/items/weapon/submachine_gun/969vz.json"
+    },
+    "additional_key": "HK UMP9"
+  },
+  "96mj0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/96mj0.png",
+      "json": "value/items/weapon/submachine_gun/96mj0.json"
+    },
+    "additional_key": "ПП-91 «Кедр»"
+  },
+  "g40d0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/g40d0.png",
+      "json": "value/items/weapon/submachine_gun/g40d0.json"
+    },
+    "additional_key": "IMI Uzi"
+  },
+  "knlq0": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/knlq0.png",
+      "json": "value/items/weapon/submachine_gun/knlq0.json"
+    },
+    "additional_key": "СР-2М «Вереск»"
+  },
+  "m0m7j": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/m0m7j.png",
+      "json": "value/items/weapon/submachine_gun/m0m7j.json"
+    },
+    "additional_key": "ПП «Орех»"
+  },
+  "okm10": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/okm10.png",
+      "json": "value/items/weapon/submachine_gun/okm10.json"
+    },
+    "additional_key": "Steyr AUG 9mm"
+  },
+  "p6rm6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/p6rm6.png",
+      "json": "value/items/weapon/submachine_gun/p6rm6.json"
+    },
+    "additional_key": "ППШ"
+  },
+  "qjvo6": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/qjvo6.png",
+      "json": "value/items/weapon/submachine_gun/qjvo6.json"
+    },
+    "additional_key": "Spectre M4"
+  },
+  "y37dz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/y37dz.png",
+      "json": "value/items/weapon/submachine_gun/y37dz.json"
+    },
+    "additional_key": "ПП-19-01 «Витязь»"
+  },
+  "y37qz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/y37qz.png",
+      "json": "value/items/weapon/submachine_gun/y37qz.json"
+    },
+    "additional_key": "TDI KRISS Vector"
+  },
+  "y37wz": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/y37wz.png",
+      "json": "value/items/weapon/submachine_gun/y37wz.json"
+    },
+    "additional_key": "Walther MPK"
+  },
+  "zz742": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/zz742.png",
+      "json": "value/items/weapon/submachine_gun/zz742.json"
+    },
+    "additional_key": "АЕК-919К «Каштан»"
+  },
+  "zz7d2": {
+    "paths": {
+      "image": "/static/value/icons/weapon/submachine_gun/zz7d2.png",
+      "json": "value/items/weapon/submachine_gun/zz7d2.json"
+    },
+    "additional_key": "ПП-19 «Бизон-2-01»"
+  }
+}
