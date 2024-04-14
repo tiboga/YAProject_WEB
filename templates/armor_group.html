@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <style>
+        a{color:#A01F1F}
+        a:hover{color:#C60606}
+        div{
+        background: url("/img/main_picture_1.jpg") no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    </style>
+</head>
+<body>
+<div>
+    {% for elem in sp%}
+        <a href="{{elem.href}}">{{elem.name}}
+        <img src="{{elem.img}}"></a>
+    {%endfor%}
+</div>
+</body>
+{%endblock%}

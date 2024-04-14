@@ -85,7 +85,7 @@ def weapons(id=0, fav=False):
         return redirect("/weapons")
     return render_template("weapons.html", new_weapon=weapons, fav=fav)
 
-
+"""
 @app.route('/armor/<int:id>', methods=['GET', 'POST'])
 @app.route('/armor/<fav>', methods=['GET', 'POST'])
 @app.route('/armor')
@@ -114,29 +114,14 @@ def armor(id=0, fav=False):
             abort(404)
         return redirect("/armor")
     return render_template("armor.html", new_armor=armor, fav=fav)
-
+"""
 
 @app.route('/')
 def index():
     return redirect('/weapons')
 
 
-@app.route('/new_weapon', methods=['GET', 'POST'])
-@login_required
-def add_weapons():
-    form = WeaponsForm()
-    if form.validate_on_submit():
-        db_sess = db_session.create_session()
-        weapons = Weapons()
-        weapons.title = form.title.data
-        weapons.content = form.content.data
-        weapons.is_private = form.is_private.data
-        current_user.weapons.append(weapons)
-        db_sess.merge(current_user)
-        db_sess.commit()
-        return redirect('/weapons')
-    return render_template('new_weapon.html', title='Добавление оружия',
-                           form=form)
+
 
 
 @app.route('/weapon/<clas>/<name>')
@@ -161,6 +146,7 @@ def weapon(name, clas=None):
     else:
         with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
             diction = json.load(f)
+        img_url = f'/static/value/icons/weapon/{clas}/{name}.png'
     return render_template('weapon_info.html', dict=diction, img_url=img_url)
 
 
@@ -175,6 +161,60 @@ def ret_class_of_weapon(clas):
                 {'name': elem['additional_key'], 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img":elem["paths"]['image']})
     return render_template('weapon_group.html', sp=sp_of_a)
 
+
+@app.route('/armor/<clas>/<name>')
+@app.route('/armor/<name>')
+def armor(name, clas=None):
+    img_url = ''
+    if not clas:
+        path = None
+        with open('map_armor.json', 'r', encoding='UTF-8') as f:
+            tmp_dict = json.load(f)
+        if name in tmp_dict.keys():
+            path = tmp_dict[name]['paths']['json']
+        else:
+            for elem in tmp_dict.values():
+                if elem['additional_key'] == name:
+                    path = elem['paths']['json']
+                    img_url = elem['paths']['image']
+            if path:
+                with open(path, 'r', encoding="UTF-8") as f:
+                    diction = json.load(f)
+    else:
+        with open(f'value/items/armor/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
+            diction = json.load(f)
+        img_url = f'/static/value/icons/armor/{clas}/{name}.png'
+    return render_template('armor_info.html', dict=diction, img_url=img_url)
+
+@app.route('/class_of_armor/<clas>')
+def ret_class_of_weapon(clas):
+    with open('map_armor.json', 'r', encoding='UTF-8') as f:
+        tmp_dict = json.load(f)
+    sp_of_a = []
+    for elem in tmp_dict.values():
+        if elem['paths']['json'].split("/")[-2] == clas:
+            sp_of_a.append(
+                {'name': elem['additional_key'], 'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img":elem["paths"]['image']})
+    return render_template('armor_group.html', sp=sp_of_a)
+
+
+"""
+@app.route('/new_weapon', methods=['GET', 'POST'])
+@login_required
+def add_weapons():
+    form = WeaponsForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        weapons = Weapons()
+        weapons.title = form.title.data
+        weapons.content = form.content.data
+        weapons.is_private = form.is_private.data
+        current_user.weapons.append(weapons)
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect('/weapons')
+    return render_template('new_weapon.html', title='Добавление оружия',
+                           form=form)
 
 @app.route('/new_weapon/<int:id>', methods=['GET', 'POST'])
 @login_required
@@ -290,7 +330,7 @@ def armor_delete(id):
     else:
         abort(404)
     return redirect('/armor')
-
+"""
 
 @app.route("/session_test")
 def session_test():

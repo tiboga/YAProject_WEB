@@ -50,6 +50,7 @@ for e in sp:
                 os.mkdir(tmp_path)
         with open(f"./value/{path}", 'w', encoding='UTF-8') as f:
             json.dump(out_diction, f, ensure_ascii=False)
+
         # info = [elem['elements' if elem['type'] == 'list' else 'text'] for elem in original_diction['infoBlocks']]
         # with open(f"test.json", 'w', encoding='UTF-8') as f:
         #     json.dump(info, f, ensure_ascii=False)
