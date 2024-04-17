@@ -1,0 +1,1108 @@
+{
+  "1rk6g": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/1rk6g.png",
+      "json": "value/items/armor/clothes/1rk6g.json"
+    },
+    "additional_key": "Бандитская куртка"
+  },
+  "5lr71": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/5lr71.png",
+      "json": "value/items/armor/clothes/5lr71.json"
+    },
+    "additional_key": "Кожаная куртка"
+  },
+  "96n2l": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/96n2l.png",
+      "json": "value/items/armor/clothes/96n2l.json"
+    },
+    "additional_key": "Куртка"
+  },
+  "96nrq": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/96nrq.png",
+      "json": "value/items/armor/clothes/96nrq.json"
+    },
+    "additional_key": "Модная куртка"
+  },
+  "g4yw6": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/g4yw6.png",
+      "json": "value/items/armor/clothes/g4yw6.json"
+    },
+    "additional_key": "Бандитская кожанка"
+  },
+  "y35ok": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/y35ok.png",
+      "json": "value/items/armor/clothes/y35ok.json"
+    },
+    "additional_key": "Костюм «Крот»"
+  },
+  "y35q0": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/y35q0.png",
+      "json": "value/items/armor/clothes/y35q0.json"
+    },
+    "additional_key": "Пальто со шляпой"
+  },
+  "zzy6y": {
+    "paths": {
+      "image": "/static/value/icons/armor/clothes/zzy6y.png",
+      "json": "value/items/armor/clothes/zzy6y.json"
+    },
+    "additional_key": "Бандитский «Крот»"
+  },
+  "0rn7d": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/0rn7d.png",
+      "json": "value/items/armor/combat/0rn7d.json"
+    },
+    "additional_key": "Бронекостюм «Авангард»"
+  },
+  "1rpl6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/1rpl6.png",
+      "json": "value/items/armor/combat/1rpl6.json"
+    },
+    "additional_key": "Сверхтяжелый бронекостюм «Гранит»"
+  },
+  "2oqdl": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/2oqdl.png",
+      "json": "value/items/armor/combat/2oqdl.json"
+    },
+    "additional_key": "Защитный костюм «Ворса»"
+  },
+  "2oqll": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/2oqll.png",
+      "json": "value/items/armor/combat/2oqll.json"
+    },
+    "additional_key": "Экзоброня «Егерь»"
+  },
+  "3g6nl": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/3g6nl.png",
+      "json": "value/items/armor/combat/3g6nl.json"
+    },
+    "additional_key": "Маскировочный костюм «Смородина»"
+  },
+  "3g6rl": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/3g6rl.png",
+      "json": "value/items/armor/combat/3g6rl.json"
+    },
+    "additional_key": "Бронекостюм «Гоплит»"
+  },
+  "4q9op": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/4q9op.png",
+      "json": "value/items/armor/combat/4q9op.json"
+    },
+    "additional_key": "Поношенный «Зверобой»"
+  },
+  "4ql0r": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/4ql0r.png",
+      "json": "value/items/armor/combat/4ql0r.json"
+    },
+    "additional_key": "Плащ"
+  },
+  "4ql1r": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/4ql1r.png",
+      "json": "value/items/armor/combat/4ql1r.json"
+    },
+    "additional_key": "Бронескелет «Центурион»"
+  },
+  "4ql2r": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/4ql2r.png",
+      "json": "value/items/armor/combat/4ql2r.json"
+    },
+    "additional_key": "Куртка с бронежилетом"
+  },
+  "4qlvo": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/4qlvo.png",
+      "json": "value/items/armor/combat/4qlvo.json"
+    },
+    "additional_key": "Поношенный «Центурион»"
+  },
+  "5l1q0": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/5l1q0.png",
+      "json": "value/items/armor/combat/5l1q0.json"
+    },
+    "additional_key": "Модифицированный экзоскелет"
+  },
+  "5lr20": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/5lr20.png",
+      "json": "value/items/armor/combat/5lr20.json"
+    },
+    "additional_key": "Бронекостюм «КЗ-3б»"
+  },
+  "5lr4q": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/5lr4q.png",
+      "json": "value/items/armor/combat/5lr4q.json"
+    },
+    "additional_key": "Защитный бронекостюм «Йорш»"
+  },
+  "5lrn1": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/5lrn1.png",
+      "json": "value/items/armor/combat/5lrn1.json"
+    },
+    "additional_key": "Tяжелый бронекостюм «Восход»"
+  },
+  "5lrvq": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/5lrvq.png",
+      "json": "value/items/armor/combat/5lrvq.json"
+    },
+    "additional_key": "Поврежденный «Егерь»"
+  },
+  "6w06p": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/6w06p.png",
+      "json": "value/items/armor/combat/6w06p.json"
+    },
+    "additional_key": "Костюм «Скаут»"
+  },
+  "6w0rp": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/6w0rp.png",
+      "json": "value/items/armor/combat/6w0rp.json"
+    },
+    "additional_key": "Поношенный костюм «Траппер»"
+  },
+  "6w0zp": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/6w0zp.png",
+      "json": "value/items/armor/combat/6w0zp.json"
+    },
+    "additional_key": "Экзоскелет «Масть»"
+  },
+  "7lm56": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/7lm56.png",
+      "json": "value/items/armor/combat/7lm56.json"
+    },
+    "additional_key": "Экзоскелет"
+  },
+  "7lmn6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/7lmn6.png",
+      "json": "value/items/armor/combat/7lmn6.json"
+    },
+    "additional_key": "Защитный костюм «Псарь»"
+  },
+  "7lmr6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/7lmr6.png",
+      "json": "value/items/armor/combat/7lmr6.json"
+    },
+    "additional_key": "Костюм «Траппер»"
+  },
+  "96n5l": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/96n5l.png",
+      "json": "value/items/armor/combat/96n5l.json"
+    },
+    "additional_key": "Поношенный «Легионер»"
+  },
+  "96n5y": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/96n5y.png",
+      "json": "value/items/armor/combat/96n5y.json"
+    },
+    "additional_key": "Поношенная «Масть»"
+  },
+  "96n9l": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/96n9l.png",
+      "json": "value/items/armor/combat/96n9l.json"
+    },
+    "additional_key": "Бронекостюм «Страйкер»"
+  },
+  "96yz0": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/96yz0.png",
+      "json": "value/items/armor/combat/96yz0.json"
+    },
+    "additional_key": "Сверхтяжелый бронекостюм «Рейтар»"
+  },
+  "dmgjj": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/dmgjj.png",
+      "json": "value/items/armor/combat/dmgjj.json"
+    },
+    "additional_key": "Лечебный Берилл"
+  },
+  "dmgqj": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/dmgqj.png",
+      "json": "value/items/armor/combat/dmgqj.json"
+    },
+    "additional_key": "Охотничий плащ"
+  },
+  "dmgvj": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/dmgvj.png",
+      "json": "value/items/armor/combat/dmgvj.json"
+    },
+    "additional_key": "Защитный костюм «Ош»"
+  },
+  "dmgw2": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/dmgw2.png",
+      "json": "value/items/armor/combat/dmgw2.json"
+    },
+    "additional_key": "Маскировочный костюм"
+  },
+  "g4310": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/g4310.png",
+      "json": "value/items/armor/combat/g4310.json"
+    },
+    "additional_key": "Сверхтяжелый бронекостюм «Вождь»"
+  },
+  "g43k0": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/g43k0.png",
+      "json": "value/items/armor/combat/g43k0.json"
+    },
+    "additional_key": "Экзоскелет «Мул»"
+  },
+  "g4y06": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/g4y06.png",
+      "json": "value/items/armor/combat/g4y06.json"
+    },
+    "additional_key": "Поношенный бронекостюм «Страйкер»"
+  },
+  "g4y3n": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/g4y3n.png",
+      "json": "value/items/armor/combat/g4y3n.json"
+    },
+    "additional_key": "Комбинезон «КЗ-1»"
+  },
+  "g4y5p": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/g4y5p.png",
+      "json": "value/items/armor/combat/g4y5p.json"
+    },
+    "additional_key": "Бронекостюм «КЗ-3а»"
+  },
+  "g4yq5": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/g4yq5.png",
+      "json": "value/items/armor/combat/g4yq5.json"
+    },
+    "additional_key": "Экзоскелет «Гренадер»"
+  },
+  "j5krg": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/j5krg.png",
+      "json": "value/items/armor/combat/j5krg.json"
+    },
+    "additional_key": "Бронекостюм «Призрачный охотник»"
+  },
+  "kn360": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/kn360.png",
+      "json": "value/items/armor/combat/kn360.json"
+    },
+    "additional_key": "Поношенный «Мул»"
+  },
+  "knq0p": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/knq0p.png",
+      "json": "value/items/armor/combat/knq0p.json"
+    },
+    "additional_key": "Бронекостюм «Рысь»"
+  },
+  "knqly": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/knqly.png",
+      "json": "value/items/armor/combat/knqly.json"
+    },
+    "additional_key": "Броня репортера"
+  },
+  "knqmy": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/knqmy.png",
+      "json": "value/items/armor/combat/knqmy.json"
+    },
+    "additional_key": "Бандитский плащ"
+  },
+  "ly3kj": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/ly3kj.png",
+      "json": "value/items/armor/combat/ly3kj.json"
+    },
+    "additional_key": "Сверхтяжелый бронекостюм «Апостол»"
+  },
+  "m062y": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/m062y.png",
+      "json": "value/items/armor/combat/m062y.json"
+    },
+    "additional_key": "Куртка с бронежилетом"
+  },
+  "m065y": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/m065y.png",
+      "json": "value/items/armor/combat/m065y.json"
+    },
+    "additional_key": "Поношенный тяжелый бронекостюм «Восход»"
+  },
+  "n4ry1": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/n4ry1.png",
+      "json": "value/items/armor/combat/n4ry1.json"
+    },
+    "additional_key": "Поношенный защитный костюм «Ош»"
+  },
+  "ok0w6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/ok0w6.png",
+      "json": "value/items/armor/combat/ok0w6.json"
+    },
+    "additional_key": "Поношенный тяжелый бронекостюм «Громила»"
+  },
+  "p6m3w": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/p6m3w.png",
+      "json": "value/items/armor/combat/p6m3w.json"
+    },
+    "additional_key": "Бронекостюм «Берилл-5М»"
+  },
+  "p6mg4": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/p6mg4.png",
+      "json": "value/items/armor/combat/p6mg4.json"
+    },
+    "additional_key": "Экзоброня «Крысолов»"
+  },
+  "p6mrw": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/p6mrw.png",
+      "json": "value/items/armor/combat/p6mrw.json"
+    },
+    "additional_key": "Поношенный защитный костюм «Ворса»"
+  },
+  "qj1lk": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/qj1lk.png",
+      "json": "value/items/armor/combat/qj1lk.json"
+    },
+    "additional_key": "Бронекостюм «КЗ-4»"
+  },
+  "qj1y6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/qj1y6.png",
+      "json": "value/items/armor/combat/qj1y6.json"
+    },
+    "additional_key": "Поношенный «Туз»"
+  },
+  "qjomk": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/qjomk.png",
+      "json": "value/items/armor/combat/qjomk.json"
+    },
+    "additional_key": "Тяжелый бронекостюм «Идущий в метели»"
+  },
+  "qjoz3": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/qjoz3.png",
+      "json": "value/items/armor/combat/qjoz3.json"
+    },
+    "additional_key": "Экзоскелет «Медведь»"
+  },
+  "vj12r": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/vj12r.png",
+      "json": "value/items/armor/combat/vj12r.json"
+    },
+    "additional_key": "Бронекостюм «Червь»"
+  },
+  "vj1rr": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/vj1rr.png",
+      "json": "value/items/armor/combat/vj1rr.json"
+    },
+    "additional_key": "Поношенный бронекостюм «Гоплит»"
+  },
+  "wj49p": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/wj49p.png",
+      "json": "value/items/armor/combat/wj49p.json"
+    },
+    "additional_key": "Экзоброня «Зверобой»"
+  },
+  "wjg2o": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/wjg2o.png",
+      "json": "value/items/armor/combat/wjg2o.json"
+    },
+    "additional_key": "Тяжелый комплект «Алтын-Т»"
+  },
+  "wjg62": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/wjg62.png",
+      "json": "value/items/armor/combat/wjg62.json"
+    },
+    "additional_key": "Тяжелый бронекостюм «Легионер»"
+  },
+  "wjgp3": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/wjgp3.png",
+      "json": "value/items/armor/combat/wjgp3.json"
+    },
+    "additional_key": "Поврежденный «Центурион»"
+  },
+  "y352k": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/y352k.png",
+      "json": "value/items/armor/combat/y352k.json"
+    },
+    "additional_key": "Tяжелый бронекостюм «Громила»"
+  },
+  "y359o": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/y359o.png",
+      "json": "value/items/armor/combat/y359o.json"
+    },
+    "additional_key": "Тяжелый бронекостюм «Туманный охотник»"
+  },
+  "y35p3": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/y35p3.png",
+      "json": "value/items/armor/combat/y35p3.json"
+    },
+    "additional_key": "Поношенный «Егерь»"
+  },
+  "y3q1o": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/y3q1o.png",
+      "json": "value/items/armor/combat/y3q1o.json"
+    },
+    "additional_key": "SBA TANK"
+  },
+  "zzjk2": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/zzjk2.png",
+      "json": "value/items/armor/combat/zzjk2.json"
+    },
+    "additional_key": "Экзоскелет «Туз»"
+  },
+  "zzy1n": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/zzy1n.png",
+      "json": "value/items/armor/combat/zzy1n.json"
+    },
+    "additional_key": "Комплект «Алтын»"
+  },
+  "zzy5y": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/zzy5y.png",
+      "json": "value/items/armor/combat/zzy5y.json"
+    },
+    "additional_key": "Поношенный экзоскелет"
+  },
+  "zzy9m": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/zzy9m.png",
+      "json": "value/items/armor/combat/zzy9m.json"
+    },
+    "additional_key": "Экзоскелет «Абориген»"
+  },
+  "zzyjk": {
+    "paths": {
+      "image": "/static/value/icons/armor/combat/zzyjk.png",
+      "json": "value/items/armor/combat/zzyjk.json"
+    },
+    "additional_key": "Бронекостюм «КЗ-2»"
+  },
+  "0r429": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/0r429.png",
+      "json": "value/items/armor/combined/0r429.json"
+    },
+    "additional_key": "Бандитский костюм"
+  },
+  "0r4gy": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/0r4gy.png",
+      "json": "value/items/armor/combined/0r4gy.json"
+    },
+    "additional_key": "Костюм «Экспедиция»"
+  },
+  "0r4k9": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/0r4k9.png",
+      "json": "value/items/armor/combined/0r4k9.json"
+    },
+    "additional_key": "Поношенный костюм АО-3 «Искатель»"
+  },
+  "1rk7g": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/1rk7g.png",
+      "json": "value/items/armor/combined/1rk7g.json"
+    },
+    "additional_key": "ЗК-1 «Отмычка»"
+  },
+  "1rkdg": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/1rkdg.png",
+      "json": "value/items/armor/combined/1rkdg.json"
+    },
+    "additional_key": "Поврежденный АО-2 «Странник»"
+  },
+  "1rkq2": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/1rkq2.png",
+      "json": "value/items/armor/combined/1rkq2.json"
+    },
+    "additional_key": "Поношенный «СКАТ-9м»"
+  },
+  "1rkqg": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/1rkqg.png",
+      "json": "value/items/armor/combined/1rkqg.json"
+    },
+    "additional_key": "Поношенный ПСЗ-10"
+  },
+  "1rkz2": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/1rkz2.png",
+      "json": "value/items/armor/combined/1rkz2.json"
+    },
+    "additional_key": "Бронекостюм «Армай»"
+  },
+  "2oqnl": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/2oqnl.png",
+      "json": "value/items/armor/combined/2oqnl.json"
+    },
+    "additional_key": "Костюм АО-1 «Бродяга»"
+  },
+  "3g69l": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/3g69l.png",
+      "json": "value/items/armor/combined/3g69l.json"
+    },
+    "additional_key": "Бронекостюм «СКАТ-9б»"
+  },
+  "5l1yg": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/5l1yg.png",
+      "json": "value/items/armor/combined/5l1yg.json"
+    },
+    "additional_key": "УКАЗ АО-6 «Кочевник»"
+  },
+  "5lrg1": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/5lrg1.png",
+      "json": "value/items/armor/combined/5lrg1.json"
+    },
+    "additional_key": "Бронекостюм «Пахан»"
+  },
+  "96nml": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/96nml.png",
+      "json": "value/items/armor/combined/96nml.json"
+    },
+    "additional_key": "Поношенный АО-2 «Странник»"
+  },
+  "dmg02": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/dmg02.png",
+      "json": "value/items/armor/combined/dmg02.json"
+    },
+    "additional_key": "Поношенный «Клептоман»"
+  },
+  "g43rp": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/g43rp.png",
+      "json": "value/items/armor/combined/g43rp.json"
+    },
+    "additional_key": "Экзоброня JD ZIVCAS 2A"
+  },
+  "g4yo5": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/g4yo5.png",
+      "json": "value/items/armor/combined/g4yo5.json"
+    },
+    "additional_key": "Поврежденный «СКАТ-9м»"
+  },
+  "g4yo6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/g4yo6.png",
+      "json": "value/items/armor/combined/g4yo6.json"
+    },
+    "additional_key": "Поношенный «Пахан»"
+  },
+  "j5ko0": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/j5ko0.png",
+      "json": "value/items/armor/combined/j5ko0.json"
+    },
+    "additional_key": "Комбинезон «Заря» с противогазом"
+  },
+  "j5kv0": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/j5kv0.png",
+      "json": "value/items/armor/combined/j5kv0.json"
+    },
+    "additional_key": "Костюм АО-2 «Странник»"
+  },
+  "kn3yv": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/kn3yv.png",
+      "json": "value/items/armor/combined/kn3yv.json"
+    },
+    "additional_key": "Комбинезон «Ригель»"
+  },
+  "knqkv": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/knqkv.png",
+      "json": "value/items/armor/combined/knqkv.json"
+    },
+    "additional_key": "Бронескелет «Альбатрос-Разведчик»"
+  },
+  "knqvy": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/knqvy.png",
+      "json": "value/items/armor/combined/knqvy.json"
+    },
+    "additional_key": "Бронекостюм «Сокол»"
+  },
+  "lyjvk": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/lyjvk.png",
+      "json": "value/items/armor/combined/lyjvk.json"
+    },
+    "additional_key": "Костюм АО-3 «Искатель»"
+  },
+  "m034j": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/m034j.png",
+      "json": "value/items/armor/combined/m034j.json"
+    },
+    "additional_key": "Бронекостюм «Каратель»"
+  },
+  "m06k2": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/m06k2.png",
+      "json": "value/items/armor/combined/m06k2.json"
+    },
+    "additional_key": "Бронекостюм «СКАТ-10»"
+  },
+  "m06my": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/m06my.png",
+      "json": "value/items/armor/combined/m06my.json"
+    },
+    "additional_key": "Бандитский костюм с противогазом"
+  },
+  "n4rm1": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/n4rm1.png",
+      "json": "value/items/armor/combined/n4rm1.json"
+    },
+    "additional_key": "Костюм «Клептоман»"
+  },
+  "n4rp1": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/n4rp1.png",
+      "json": "value/items/armor/combined/n4rp1.json"
+    },
+    "additional_key": "Поношенный бронекостюм «Пересмешник»"
+  },
+  "ok0jm": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/ok0jm.png",
+      "json": "value/items/armor/combined/ok0jm.json"
+    },
+    "additional_key": "Поношенный «СКАТ-9б»"
+  },
+  "ok0v6": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/ok0v6.png",
+      "json": "value/items/armor/combined/ok0v6.json"
+    },
+    "additional_key": "Поношенный бронекостюм «Сокол»"
+  },
+  "p6m1w": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/p6m1w.png",
+      "json": "value/items/armor/combined/p6m1w.json"
+    },
+    "additional_key": "УКАЗ АО-4 «Рейдер»"
+  },
+  "p6m4w": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/p6m4w.png",
+      "json": "value/items/armor/combined/p6m4w.json"
+    },
+    "additional_key": "Поношенный АО-4 «Рейдер»"
+  },
+  "qjo2j": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/qjo2j.png",
+      "json": "value/items/armor/combined/qjo2j.json"
+    },
+    "additional_key": "Комбинезон «Заря»"
+  },
+  "qjogj": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/qjogj.png",
+      "json": "value/items/armor/combined/qjogj.json"
+    },
+    "additional_key": "Бронекостюм «Пересмешник»"
+  },
+  "rwgmg": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/rwgmg.png",
+      "json": "value/items/armor/combined/rwgmg.json"
+    },
+    "additional_key": "Экзокостюм «Гончий»"
+  },
+  "rwn2v": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/rwn2v.png",
+      "json": "value/items/armor/combined/rwn2v.json"
+    },
+    "additional_key": "Комбинезон «Турист»"
+  },
+  "rwnqv": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/rwnqv.png",
+      "json": "value/items/armor/combined/rwnqv.json"
+    },
+    "additional_key": "Поврежденный костюм АО-3 «Искатель»"
+  },
+  "rwnrv": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/rwnrv.png",
+      "json": "value/items/armor/combined/rwnrv.json"
+    },
+    "additional_key": "Костюм «Горка-3»"
+  },
+  "vj14r": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/vj14r.png",
+      "json": "value/items/armor/combined/vj14r.json"
+    },
+    "additional_key": "УКАЗ АО-5 «Пилигрим»"
+  },
+  "vj1pp": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/vj1pp.png",
+      "json": "value/items/armor/combined/vj1pp.json"
+    },
+    "additional_key": "Поношенный «Турист»"
+  },
+  "wj4no": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/wj4no.png",
+      "json": "value/items/armor/combined/wj4no.json"
+    },
+    "additional_key": "Бронескелет «Альбатрос-Штурмовик»"
+  },
+  "y35jk": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/y35jk.png",
+      "json": "value/items/armor/combined/y35jk.json"
+    },
+    "additional_key": "Бронекостюм «СКАТ-9м»"
+  },
+  "y35l3": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/y35l3.png",
+      "json": "value/items/armor/combined/y35l3.json"
+    },
+    "additional_key": "УКАЗ «Спаннер»"
+  },
+  "y3qgz": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/y3qgz.png",
+      "json": "value/items/armor/combined/y3qgz.json"
+    },
+    "additional_key": "Поношенный АО-6 «Кочевник»"
+  },
+  "zzjgn": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/zzjgn.png",
+      "json": "value/items/armor/combined/zzjgn.json"
+    },
+    "additional_key": "Бронескелет «Альбатрос-Лазутчик»"
+  },
+  "zzy5m": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/zzy5m.png",
+      "json": "value/items/armor/combined/zzy5m.json"
+    },
+    "additional_key": "Поношенный АО-5 «Пилигрим»"
+  },
+  "zzyly": {
+    "paths": {
+      "image": "/static/value/icons/armor/combined/zzyly.png",
+      "json": "value/items/armor/combined/zzyly.json"
+    },
+    "additional_key": "Бронекостюм ПСЗ-10"
+  },
+  "1rp4q": {
+    "paths": {
+      "image": "/static/value/icons/armor/device/1rp4q.png",
+      "json": "value/items/armor/device/1rp4q.json"
+    },
+    "additional_key": "Прибор ночного видения"
+  },
+  "5l134": {
+    "paths": {
+      "image": "/static/value/icons/armor/device/5l134.png",
+      "json": "value/items/armor/device/5l134.json"
+    },
+    "additional_key": "NVD-11 Export"
+  },
+  "96y1w": {
+    "paths": {
+      "image": "/static/value/icons/armor/device/96y1w.png",
+      "json": "value/items/armor/device/96y1w.json"
+    },
+    "additional_key": "Кустарный ПНВ"
+  },
+  "g43pg": {
+    "paths": {
+      "image": "/static/value/icons/armor/device/g43pg.png",
+      "json": "value/items/armor/device/g43pg.json"
+    },
+    "additional_key": "ПНВ 2-го поколения"
+  },
+  "y3qyw": {
+    "paths": {
+      "image": "/static/value/icons/armor/device/y3qyw.png",
+      "json": "value/items/armor/device/y3qyw.json"
+    },
+    "additional_key": "ПНВ О1М"
+  },
+  "0r4q9": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/0r4q9.png",
+      "json": "value/items/armor/scientist/0r4q9.json"
+    },
+    "additional_key": "КИМ-113 «Иолит»"
+  },
+  "0rnw1": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/0rnw1.png",
+      "json": "value/items/armor/scientist/0rnw1.json"
+    },
+    "additional_key": "КИМ-102 «Циркон»"
+  },
+  "1rkn1": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/1rkn1.png",
+      "json": "value/items/armor/scientist/1rkn1.json"
+    },
+    "additional_key": "Комбинезон «Магнит»"
+  },
+  "2ovr0": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/2ovr0.png",
+      "json": "value/items/armor/scientist/2ovr0.json"
+    },
+    "additional_key": "Комбинезон «Сатурн»"
+  },
+  "3gdoz": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/3gdoz.png",
+      "json": "value/items/armor/scientist/3gdoz.json"
+    },
+    "additional_key": "Поношенный комбинезон «Сатурн»"
+  },
+  "4qldn": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/4qldn.png",
+      "json": "value/items/armor/scientist/4qldn.json"
+    },
+    "additional_key": "Комбинезон «Тонга»"
+  },
+  "4qlnr": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/4qlnr.png",
+      "json": "value/items/armor/scientist/4qlnr.json"
+    },
+    "additional_key": "КИМ-99М «Малахит»"
+  },
+  "7lzw3": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/7lzw3.png",
+      "json": "value/items/armor/scientist/7lzw3.json"
+    },
+    "additional_key": "Поврежденный комбинезон «Сатурн»"
+  },
+  "96ngz": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/96ngz.png",
+      "json": "value/items/armor/scientist/96ngz.json"
+    },
+    "additional_key": "Продвинутый ОЗК"
+  },
+  "g4ym6": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/g4ym6.png",
+      "json": "value/items/armor/scientist/g4ym6.json"
+    },
+    "additional_key": "Комбинезон «СЕВА»"
+  },
+  "j5k10": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/j5k10.png",
+      "json": "value/items/armor/scientist/j5k10.json"
+    },
+    "additional_key": "Поношенный комбинезон «СЕВА»"
+  },
+  "j5k6g": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/j5k6g.png",
+      "json": "value/items/armor/scientist/j5k6g.json"
+    },
+    "additional_key": "Поношенный «Изумруд»"
+  },
+  "knqgy": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/knqgy.png",
+      "json": "value/items/armor/scientist/knqgy.json"
+    },
+    "additional_key": "Поношенный КИМ-99 «Янтарь»"
+  },
+  "knqwp": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/knqwp.png",
+      "json": "value/items/armor/scientist/knqwp.json"
+    },
+    "additional_key": "Поношенный «Топаз»"
+  },
+  "lyj2k": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/lyj2k.png",
+      "json": "value/items/armor/scientist/lyj2k.json"
+    },
+    "additional_key": "Комбинезон «Заря-Б»"
+  },
+  "lyjzk": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/lyjzk.png",
+      "json": "value/items/armor/scientist/lyjzk.json"
+    },
+    "additional_key": "Поношенный комбинезон «ЖНЕЦ»"
+  },
+  "m06vy": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/m06vy.png",
+      "json": "value/items/armor/scientist/m06vy.json"
+    },
+    "additional_key": "КИМ-116 «Изумруд»"
+  },
+  "n4r21": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/n4r21.png",
+      "json": "value/items/armor/scientist/n4r21.json"
+    },
+    "additional_key": "КИМ-Х «АТЛАС»"
+  },
+  "ok096": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/ok096.png",
+      "json": "value/items/armor/scientist/ok096.json"
+    },
+    "additional_key": "КИМ-122 «Аметист»"
+  },
+  "ok0m6": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/ok0m6.png",
+      "json": "value/items/armor/scientist/ok0m6.json"
+    },
+    "additional_key": "Бандитский костюм с баллонами"
+  },
+  "qjokj": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/qjokj.png",
+      "json": "value/items/armor/scientist/qjokj.json"
+    },
+    "additional_key": "Поношенный КИМ-99М «Малахит»"
+  },
+  "qjor3": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/qjor3.png",
+      "json": "value/items/armor/scientist/qjor3.json"
+    },
+    "additional_key": "Поношенный «Иолит»"
+  },
+  "rwgl5": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/rwgl5.png",
+      "json": "value/items/armor/scientist/rwgl5.json"
+    },
+    "additional_key": "КИМ-100 «Гранат»"
+  },
+  "rwnzv": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/rwnzv.png",
+      "json": "value/items/armor/scientist/rwnzv.json"
+    },
+    "additional_key": "КИМ-105 «Топаз»"
+  },
+  "wj4lp": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/wj4lp.png",
+      "json": "value/items/armor/scientist/wj4lp.json"
+    },
+    "additional_key": "Комбинезон «Пересвет»"
+  },
+  "wjg72": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/wjg72.png",
+      "json": "value/items/armor/scientist/wjg72.json"
+    },
+    "additional_key": "КИМ-99 «Янтарь»"
+  },
+  "wjgm2": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/wjgm2.png",
+      "json": "value/items/armor/scientist/wjgm2.json"
+    },
+    "additional_key": "Дождевик"
+  },
+  "wjgo2": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/wjgo2.png",
+      "json": "value/items/armor/scientist/wjgo2.json"
+    },
+    "additional_key": "ИП-4м"
+  },
+  "wjgq3": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/wjgq3.png",
+      "json": "value/items/armor/scientist/wjgq3.json"
+    },
+    "additional_key": "КИМ-85Д"
+  },
+  "zzy2y": {
+    "paths": {
+      "image": "/static/value/icons/armor/scientist/zzy2y.png",
+      "json": "value/items/armor/scientist/zzy2y.json"
+    },
+    "additional_key": "Комбинезон «ЖНЕЦ»"
+  }
+}

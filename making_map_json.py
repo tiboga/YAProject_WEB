@@ -27,5 +27,5 @@ for elem in sp:
 
         out_diction[key] = {'paths': dict_of_path,
                             'additional_key': dict_info['name']}
-    with open('map.json', 'w', encoding='UTF-8') as f:
+    with open('map_armor.json', 'w', encoding='UTF-8') as f:
         json.dump(out_diction, f, ensure_ascii=False)
