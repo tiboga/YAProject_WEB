@@ -2,6 +2,7 @@
 
 {% block content %}
 <head>
+    <meta charset="UTF-8">
     <style>
         a{color:#A01F1F}
         a:hover{color:#C60606}
@@ -13,11 +14,17 @@
     </style>
 </head>
 <body>
+<!--<div>-->
+<!--    {% for elem in sp%}-->
+<!--        <a href="{{elem.href}}">{{elem.name}}-->
+<!--        <img src="{{elem.img}}"></a>-->
+<!--    {%endfor%}-->
+<!--</div>-->
+{% autoescape false %}
+{{elem}}
+{% endautoescape %}
 <div>
-    {% for elem in sp%}
-        <a href="{{elem.href}}">{{elem.name}}
-        <img src="{{elem.img}}"></a>
-    {%endfor%}
+    {% include "tmp.html" %}
 </div>
 </body>
 {%endblock%}

@@ -1,4 +1,5 @@
 import json
+import math
 from pprint import pprint
 
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify, url_for
@@ -172,8 +173,44 @@ def ret_class_of_weapon(clas):
     for elem in tmp_dict.values():
         if elem['paths']['json'].split("/")[-2] == clas:
             sp_of_a.append(
-                {'name': elem['additional_key'], 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img":elem["paths"]['image']})
-    return render_template('weapon_group.html', sp=sp_of_a)
+                {'name': elem['additional_key'], 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                                                         elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                 "img": elem["paths"]['image']})
+    len_line = math.ceil(len(sp_of_a) / 4)
+    html_code = '<table>' + ''.join(["<tr>" + ''.join(['' if (j * 4 + i) > len(
+        sp_of_a) - 1 else f"<th><a href='{sp_of_a[j * 4 + i]['href']}'>{sp_of_a[j * 4 + i]['name']}</a><img src='{sp_of_a[j * 4 + i]['img']}'></th>" for i in range(4)]) + '</tr>' for j in range(len_line)]) + '</table>'
+    with open('templates/tmp.html', 'w', encoding="UTF-8") as f:
+        f.write(html_code)
+    return render_template('weapon_group.html', elem=html_code)
+
+
+@app.route('/all_weapons')
+def all_weapons():
+    translate_dict = {'Отмычка': 1,
+                      'Новичок': 2,
+                      'Сталкер': 3,
+                      'Ветеран': 4,
+                      'Мастер': 5,
+                      'Легенда': 6}
+    with open('map.json', 'r', encoding='UTF-8') as f:
+        tmp_dict = json.load(f)
+    dict_of_a = {1: [],
+                 2: [],
+                 3: [],
+                 4: [],
+                 5: [],
+                 6: []}
+    for elem in tmp_dict.values():
+        if elem['paths']['json'].split("/")[-2] == '':
+            with open(elem['paths']['json'], 'r', encoding="UTF-8") as dict_f:
+                e = json.load(dict_f)
+                e = list(filter(lambda x: x['key'] == 'Ранг', e['info']))[0]
+            dict_of_a[translate_dict[e['value']]].append(
+                {'name': elem['additional_key'],
+                 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                         elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img": elem["paths"]['image']})
+    pprint(dict_of_a)
+    return render_template('weapon_group.html', dict=dict_of_a)
 
 
 @app.route('/new_weapon/<int:id>', methods=['GET', 'POST'])
