@@ -6,11 +6,14 @@
     <style>
         a{color:#A01F1F}
         a:hover{color:#C60606}
-        div{
-        background: url("/img/main_picture_1.jpg") no-repeat;
+        body{
+        background: url("/static/img/main_picture_1.jpg") no-repeat;
         background-size: 100% 100%;
         background-attachment: fixed;
-    }
+       ul {
+        list-style-type: none;
+        }
+        div .group{background-color: rgba(0,0,0,0.5)}
     </style>
 </head>
 <body>
@@ -20,11 +23,11 @@
 <!--        <img src="{{elem.img}}"></a>-->
 <!--    {%endfor%}-->
 <!--</div>-->
+<p></p>
+<div class="group">
 {% autoescape false %}
 {{elem}}
 {% endautoescape %}
-<div>
-    {% include "tmp.html" %}
 </div>
 </body>
 {%endblock%}

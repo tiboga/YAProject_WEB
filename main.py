@@ -86,6 +86,7 @@ def weapons(id=0, fav=False):
         return redirect("/weapons")
     return render_template("weapons.html", new_weapon=weapons, fav=fav)
 
+
 """
 @app.route('/armor/<int:id>', methods=['GET', 'POST'])
 @app.route('/armor/<fav>', methods=['GET', 'POST'])
@@ -117,12 +118,10 @@ def armor(id=0, fav=False):
     return render_template("armor.html", new_armor=armor, fav=fav)
 """
 
+
 @app.route('/')
 def index():
     return redirect('/weapons')
-
-
-
 
 
 @app.route('/weapon/<clas>/<name>')
@@ -131,7 +130,7 @@ def weapon(name, clas=None):
     img_url = ''
     if not clas:
         path = None
-        with open('map.json', 'r', encoding='UTF-8') as f:
+        with open('maps/map.json', 'r', encoding='UTF-8') as f:
             tmp_dict = json.load(f)
         if name in tmp_dict.keys():
             path = tmp_dict[name]['paths']['json']
@@ -153,7 +152,7 @@ def weapon(name, clas=None):
 
 @app.route('/class_of_weapon/<clas>')
 def ret_class_of_weapon(clas):
-    with open('map.json', 'r', encoding='UTF-8') as f:
+    with open('maps/map.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
     for elem in tmp_dict.values():
@@ -164,9 +163,10 @@ def ret_class_of_weapon(clas):
                  "img": elem["paths"]['image']})
     len_line = math.ceil(len(sp_of_a) / 4)
     html_code = '<table>' + ''.join(["<tr>" + ''.join(['' if (j * 4 + i) > len(
-        sp_of_a) - 1 else f"<th><a href='{sp_of_a[j * 4 + i]['href']}'>{sp_of_a[j * 4 + i]['name']}</a><img src='{sp_of_a[j * 4 + i]['img']}'></th>" for i in range(4)]) + '</tr>' for j in range(len_line)]) + '</table>'
-    with open('templates/tmp.html', 'w', encoding="UTF-8") as f:
-        f.write(html_code)
+        sp_of_a) - 1 else f"<th><ul><li><a href='{sp_of_a[j * 4 + i]['href']}'>{sp_of_a[j * 4 + i]['name']}</a></li><li><a href='{sp_of_a[j * 4 + i]['href']}' ><img src='{sp_of_a[j * 4 + i]['img']}'></a></li></ul></th>"
+                                                       for i in range(4)]) + '</tr>' for j in
+                                     range(len_line)]) + '</table>'
+
     return render_template('weapon_group.html', elem=html_code)
 
 
@@ -177,26 +177,118 @@ def all_weapons():
                       'Сталкер': 3,
                       'Ветеран': 4,
                       'Мастер': 5,
-                      'Легенда': 6}
-    with open('map.json', 'r', encoding='UTF-8') as f:
+                      'Легенда': 6,
+                      'Just': 7}
+    with open('maps/map.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
-    dict_of_a = {1: [],
-                 2: [],
-                 3: [],
-                 4: [],
-                 5: [],
-                 6: []}
+
+    with open('maps/color_map.json', 'r', encoding='UTF-8') as f:
+        color_map = json.load(f)
+    with open('maps/names.json', 'r', encoding='UTF-8') as f:
+        name_map = json.load(f)
+    dict_with_classes = {'Пистолеты': {1: [],
+                                       2: [],
+                                       3: [],
+                                       4: [],
+                                       5: [],
+                                       6: [],
+                                       7: []},
+                         'Пистолеты-пулеметы': {1: [],
+                                                2: [],
+                                                3: [],
+                                                4: [],
+                                                5: [],
+                                                6: [],
+                                                7: []},
+                         'Автоматы': {1: [],
+                                      2: [],
+                                      3: [],
+                                      4: [],
+                                      5: [],
+                                      6: [],
+                                      7: []},
+                         'Дробовики и ружья': {1: [],
+                                               2: [],
+                                               3: [],
+                                               4: [],
+                                               5: [],
+                                               6: [],
+                                               7: []},
+                         'Устройства': {1: [],
+                                        2: [],
+                                        3: [],
+                                        4: [],
+                                        5: [],
+                                        6: [],
+                                        7: []},
+                         'Ближний бой': {1: [],
+                                         2: [],
+                                         3: [],
+                                         4: [],
+                                         5: [],
+                                         6: [],
+                                         7: []},
+                         'Прочее вооружение': {1: [],
+                                               2: [],
+                                               3: [],
+                                               4: [],
+                                               5: [],
+                                               6: [],
+                                               7: []},
+                         'Пулеметы': {1: [],
+                                      2: [],
+                                      3: [],
+                                      4: [],
+                                      5: [],
+                                      6: [],
+                                      7: []},
+                         'Снайперские винтовки': {1: [],
+                                                  2: [],
+                                                  3: [],
+                                                  4: [],
+                                                  5: [],
+                                                  6: [],
+                                                  7: []}}
     for elem in tmp_dict.values():
-        if elem['paths']['json'].split("/")[-2] == '':
-            with open(elem['paths']['json'], 'r', encoding="UTF-8") as dict_f:
-                e = json.load(dict_f)
-                e = list(filter(lambda x: x['key'] == 'Ранг', e['info']))[0]
-            dict_of_a[translate_dict[e['value']]].append(
-                {'name': elem['additional_key'],
-                 'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
-                         elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img": elem["paths"]['image']})
-    pprint(dict_of_a)
-    return render_template('weapon_group.html', dict=dict_of_a)
+        # if elem['paths']['json'].split("/")[-2] == '':
+        with open(elem['paths']['json'], 'r', encoding="UTF-8") as dict_f:
+            e = json.load(dict_f)
+            rank = list(filter(lambda x: x['key'] == 'Ранг', e['info']))
+            clas = list(filter(lambda x: x['key'] == 'Класс', e['info']))
+            if not rank:
+                rank = {'value': 'Just'}
+            else:
+                rank = rank[0]
+        dict_with_classes[clas[0]['value']][translate_dict[rank['value']]].append(
+            {'name': elem['additional_key'],
+             'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                     elem['paths']['json'].split('/')[-2:][1].split('.')[0]})
+    pprint(dict_with_classes)
+    html_code = ''
+    for key in dict_with_classes.keys():
+        print(name_map[key])
+        html_code += f"""<table>
+                            <tr>
+                                <th>
+                                    <div class="info_box">
+                                        <h2 style="color: #4ad94b" href="/class_of_weapon/{name_map[key]}">{key}</h2>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>"""
+        for into_key, into_values in dict_with_classes[key].items():
+            html_code += f'''<tr>
+                                <th>
+                                    <div class="info_box">'''
+            for href_and_name in into_values:
+                html_code += f'''<a style="color: {color_map[str(into_key)]}" href="{href_and_name['href']}">{href_and_name['name']} </a>'''
+            html_code += '''      </div>
+                                    </th>
+                                </tr>
+                                    '''
+        html_code += '</table>'
+
+    return render_template('all_weapons.html', html_code=html_code)
 
 
 @app.route('/armor/<clas>/<name>')
@@ -205,7 +297,7 @@ def armor(name, clas=None):
     img_url = ''
     if not clas:
         path = None
-        with open('map_armor.json', 'r', encoding='UTF-8') as f:
+        with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
             tmp_dict = json.load(f)
         if name in tmp_dict.keys():
             path = tmp_dict[name]['paths']['json']
@@ -223,15 +315,18 @@ def armor(name, clas=None):
         img_url = f'/static/value/icons/armor/{clas}/{name}.png'
     return render_template('armor_info.html', dict=diction, img_url=img_url)
 
+
 @app.route('/class_of_armor/<clas>')
-def ret_class_of_weapon(clas):
-    with open('map_armor.json', 'r', encoding='UTF-8') as f:
+def ret_class_of_armor(clas):
+    with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
     for elem in tmp_dict.values():
         if elem['paths']['json'].split("/")[-2] == clas:
             sp_of_a.append(
-                {'name': elem['additional_key'], 'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' + elem['paths']['json'].split('/')[-2:][1].split('.')[0], "img":elem["paths"]['image']})
+                {'name': elem['additional_key'], 'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                                                         elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                 "img": elem["paths"]['image']})
     return render_template('armor_group.html', sp=sp_of_a)
 
 
@@ -368,6 +463,7 @@ def armor_delete(id):
         abort(404)
     return redirect('/armor')
 """
+
 
 @app.route("/session_test")
 def session_test():

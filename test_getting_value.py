@@ -50,50 +50,6 @@ for e in sp:
                 os.mkdir(tmp_path)
         with open(f"./value/{path}", 'w', encoding='UTF-8') as f:
             json.dump(out_diction, f, ensure_ascii=False)
-
-        # info = [elem['elements' if elem['type'] == 'list' else 'text'] for elem in original_diction['infoBlocks']]
-        # with open(f"test.json", 'w', encoding='UTF-8') as f:
-        #     json.dump(info, f, ensure_ascii=False)
-        # break
-        # out_main_info = []
-        # out_additional_info = []
-        # out_additional_characteristic_info = []
-        # out_damage_info = []
-        # for elem in main_info:
-        #     if elem['type'] == 'key-value':
-        #         out_main_info.append({'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-        #     elif elem['type'] == 'numeric':
-        #         out_main_info.append(
-        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        # for elem in additional_info:
-        #     if elem['type'] == 'key-value':
-        #         out_additional_info.append(
-        #             {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-        #     elif elem['type'] == 'numeric':
-        #         out_additional_info.append(
-        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        # for elem in additional_characteristic_info:
-        #     if elem['type'] == 'key-value':
-        #         out_additional_characteristic_info.append(
-        #             {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-        #     elif elem['type'] == 'numeric':
-        #         out_additional_characteristic_info.append(
-        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        # for elem in damage_info:
-        #     if elem['type'] == 'key-value':
-        #         out_damage_info.append(
-        #             {'key': elem['key']['lines'][language], 'value': elem['value']['lines'][language]})
-        #     elif elem['type'] == 'numeric':
-        #         out_damage_info.append(
-        #             {'key': elem['name']['lines'][language], 'value': elem['formatted']['value'][language]})
-        #     elif elem['type'] == 'text':
-        #         out_damage_info.append(
-        #             {'key': elem['text']['lines'][language].split(':')[0], 'value': elem['text']['lines'][language]})
-        # out_diction = {'info':[{'Основная информация': out_main_info}, {'Дополнительная информация': out_additional_info},
-        #                {'Характеристики': out_additional_characteristic_info}, {'Информация об уроне': out_damage_info},
-        #                {'Описание': description}]}
-
-
     except:
         print(e, traceback.format_exc())
         n = input()

@@ -1,0 +1,4 @@
+import making_weapon_map_json
+import making_armor_map_json
+making_weapon_map_json.maker()
+making_armor_map_json.maker()
