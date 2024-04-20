@@ -16,7 +16,6 @@ from forms.user import RegisterForm
 from forms.user import LoginForm
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
 
-
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
@@ -329,6 +328,110 @@ def all_weapons():
     return render_template('all_weapons.html', html_code=html_code, need_comment=True, comments=comments)
 
 
+@app.route('/all_armor')
+def all_armor():
+    translate_dict = {'Отмычка': 1,
+                      'Новичок': 2,
+                      'Сталкер': 3,
+                      'Ветеран': 4,
+                      'Мастер': 5,
+                      'Легенда': 6,
+                      'Just': 7,
+                      "Устройства": 8}
+    with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
+        tmp_dict = json.load(f)
+
+    with open('maps/color_map.json', 'r', encoding='UTF-8') as f:
+        color_map = json.load(f)
+    with open('maps/names_armor.json', 'r', encoding='UTF-8') as f:
+        name_map = json.load(f)
+    dict_with_classes = {'Одежда': {1: [],
+                                    2: [],
+                                    3: [],
+                                    4: [],
+                                    5: [],
+                                    6: [],
+                                    7: [],
+                                    8: []
+                                    },
+                         'Боевые': {1: [],
+                                    2: [],
+                                    3: [],
+                                    4: [],
+                                    5: [],
+                                    6: [],
+                                    7: [],
+                                    8: []
+                                    },
+                         'Комбинированные': {1: [],
+                                             2: [],
+                                             3: [],
+                                             4: [],
+                                             5: [],
+                                             6: [],
+                                             7: [],
+                                             8: []
+                                             },
+                         'Устройства': {1: [],
+                                        2: [],
+                                        3: [],
+                                        4: [],
+                                        5: [],
+                                        6: [],
+                                        7: [],
+                                        8: []
+                                        },
+                         'Научные': {1: [],
+                                     2: [],
+                                     3: [],
+                                     4: [],
+                                     5: [],
+                                     6: [],
+                                     7: [],
+                                     8: []
+                                     }}
+    for elem in tmp_dict.values():
+        # if elem['paths']['json'].split("/")[-2] == '':
+        with open(elem['paths']['json'], 'r', encoding="UTF-8") as dict_f:
+            e = json.load(dict_f)
+            rank = list(filter(lambda x: x['key'] == 'Ранг', e['info']))
+            clas = list(filter(lambda x: x['key'] == 'Класс', e['info']))
+            if not rank:
+                rank = {'value': 'Just'}
+            else:
+                rank = rank[0]
+        dict_with_classes[clas[0]['value']][translate_dict[rank['value']]].append(
+            {'name': elem['additional_key'],
+             'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                     elem['paths']['json'].split('/')[-2:][1].split('.')[0]})
+    pprint(dict_with_classes)
+    html_code = ''
+    for key in dict_with_classes.keys():
+        print(name_map[key])
+        html_code += f"""<table>
+                            <tr>
+                                <th>
+                                    <div class="info_box">
+                                        <h2 style="color: #4ad94b" href="/class_of_armor/{name_map[key]}">{key}</h2>
+                                    </div>
+                                </th>
+                            </tr>
+                            <tr>"""
+        for into_key, into_values in dict_with_classes[key].items():
+            html_code += f'''<tr>
+                                <th>
+                                    <div class="info_box">'''
+            for href_and_name in into_values:
+                html_code += f'''<a style="color: {color_map[str(into_key)]}" href="{href_and_name['href']}">{href_and_name['name']} </a>'''
+            html_code += '''      </div>
+                                    </th>
+                                </tr>
+                                    '''
+        html_code += '</table>'
+
+    return render_template('all_armor.html', html_code=html_code)
+
+
 @app.route('/armor/<clas>/<name>')
 @app.route('/armor/<name>')
 def armor(name, clas=None):
@@ -371,6 +474,56 @@ def ret_class_of_armor(clas, fav=None):
     with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
+    armor = db_sess.query(Armor).filter(Armor.user == current_user
+                                            ).first()
+    items_in_armor = ""
+    if armor:
+        items_in_armor = f"{armor.clothes}, {armor.combat}, {armor.combined}, {armor.device}, {armor.scientist}"
+    if not fav:
+        for elem in tmp_dict.values():
+            if elem['paths']['json'].split("/")[-2] == clas:
+                sp_of_a.append(
+                    {'name': elem['additional_key'],
+                     'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                             elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                     "img": elem["paths"]['image']})
+    else:
+        if armor:
+            if clas == 'clothes':
+                if fav not in str(armor.clothes):
+                    armor.clothes = f'{armor.clothes}, {fav}'
+                else:
+                    armor.clothes = armor.clothes.replace(f", {fav}", "")
+            elif clas == 'combat':
+                if fav not in str(armor.combat):
+                    armor.combat = f'{armor.combat}, {fav}'
+                else:
+                    armor.combat = armor.combat.replace(f", {fav}", "")
+            elif clas == 'combined':
+                if fav not in str(armor.combined):
+                    armor.combined = f'{armor.combined}, {fav}'
+                else:
+                    armor.combined = armor.combined.replace(f", {fav}", "")
+            elif clas == 'device':
+                if fav not in str(armor.device):
+                    armor.device = f'{armor.device}, {fav}'
+                else:
+                    armor.device = armor.device.replace(f", {fav}", "")
+            elif clas == 'scientist':
+                if fav not in str(armor.scientist):
+                    armor.scientist = f'{armor.scientist}, {fav}'
+                else:
+                    armor.scientist = armor.scientist.replace(f", {fav}", "")
+            db_sess.commit()
+
+            return redirect(f"/class_of_armor/{clas}")
+        else:
+            armor1 = Armor()
+            current_user.armor.append(armor1)
+            db_sess.merge(current_user)
+            db_sess.commit()
+            return redirect(f"/class_of_armor/{clas}/{fav}")
+    return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor)
     armor = db_sess.query(Armor).filter(Armor.user == current_user
                                             ).first()
     items_in_armor = ""
