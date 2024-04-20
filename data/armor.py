@@ -10,15 +10,15 @@ categories = orm.relationship("Category",
 
 class Armor(SqlAlchemyBase):
     __tablename__ = 'armor'
-
+    
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
-    title = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    content = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    created_date = sqlalchemy.Column(sqlalchemy.DateTime,
-                                     default=datetime.datetime.now)
-    is_private = sqlalchemy.Column(sqlalchemy.Boolean, default=True)
-    favourite = sqlalchemy.Column(sqlalchemy.Boolean, default=True)
+    clothes = sqlalchemy.Column(sqlalchemy.String)
+    combat = sqlalchemy.Column(sqlalchemy.String)
+    combined = sqlalchemy.Column(sqlalchemy.String)
+    device = sqlalchemy.Column(sqlalchemy.String)
+    scientist = sqlalchemy.Column(sqlalchemy.String)
+    
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
     user = orm.relationship('User')

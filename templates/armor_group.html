@@ -2,21 +2,25 @@
 
 {% block content %}
 <head>
-    <style>
-        a{color:#A01F1F}
-        a:hover{color:#C60606}
-        div{
-        background: url("/img/main_picture_1.jpg") no-repeat;
-        background-size: 100% 100%;
-        background-attachment: fixed;
-    }
-    </style>
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="/static/armor_group.css">
+<link rel="stylesheet" href="/static/index.css">
 <body>
 <div>
     {% for elem in sp%}
-        <a href="{{elem.href}}">{{elem.name}}
-        <img src="{{elem.img}}"></a>
+    <div class="card">
+        {% if current_user.is_authenticated %}
+            {% if elem.name not in items_in_armor %}
+                <a href="/class_of_armor/{{clas}}/{{elem.name}}"><i class="fa-solid fa-heart" style="color: white; text-shadow: 5px 5px 6px black;"></i></a>
+            {% else %}
+                <a href="/class_of_armor/{{clas}}/{{elem.name}}"><i class="fa-solid fa-heart" style="color: red; text-shadow: 5px 5px 6px orange;"></i></a>
+            {% endif %}
+        {% endif %}
+        <a href="{{elem.href}}" style="width:100%">
+            <img src="{{elem.img}}"><br>
+            {{elem.name}}
+        </a>
+    </div>
     {%endfor%}
 </div>
 </body>
