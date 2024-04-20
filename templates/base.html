@@ -76,9 +76,9 @@
                 <a style="float: right" type="button" class="btn btn-info" href="/add_comment">Добавить комментарий</a>
                 {% if comments %}
                 <h3 style="color: #ffffff">Коментарии</h3>
-                <ul>
+                <ul style="list-style-type: disc;">
                 {% for elem in comments %}
-                    <li><p style="color: #ffffff">{{elem.comment_text}}</p></li>
+                    <li style="text-align:left"><p style="color: #ffffff;">{{elem.comment_text}}</p></li>
                 {%endfor%}
                 </ul>
                 {%else%}
