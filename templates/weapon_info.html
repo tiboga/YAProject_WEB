@@ -5,7 +5,7 @@
 <head>
 
     <style>
-        .description{width: 60%;}
+        .description{width: 59%;}
         table {
             float: right;
             margin: 20px;
@@ -14,7 +14,7 @@
             border: #FFFFFF;
                     }
         th, td {
-            border: 1px solid black;
+            border: 1px solid rgba(255,255,255,0.5);
             padding: 10px;
         }
         .content {
@@ -37,6 +37,7 @@
         aside > p {
             margin: 0.5rem;
         }
+        p{color: #ffffff}
         aside > table {
             align: center
             margin: 0.5rem;
@@ -74,16 +75,16 @@
         {% endfor %}
     </table>
 </aside>
-<div class="description">
-    <h2 align="center">{{dict.name}}</h2>
-    <div class="content">
-        {% for elem in dict.info %}
-        {% if loop.last %}
-        <p>{{elem.value}}</p>
-        {%endif%}
-        {% endfor %}
-    </div>
-</div>
+<h2 align="center">{{dict.name}}</h2>
+{% for elem in dict.info %}
+{% if loop.last %}
+<p>{{elem.value}}</p>
+{%endif%}
+{% endfor %}
+<section style="background-color: rgba(0,0,0,0)">
+    <p></p>
+    <a style="float: right" type="button" class="btn btn-info" href="/all_weapons">Добавить комментарий</a>
+</section>
 </body>
 </html>
 

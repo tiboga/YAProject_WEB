@@ -1,28 +1,30 @@
 {% extends "base.html" %}
 
 {% block content %}
+<!--        body{-->
+<!--        background: url("/static/img/main_picture_1.jpg") no-repeat;-->
+<!--        background-size: 100% 100%;-->
+<!--        background-attachment: fixed;-->
 <head>
     <meta charset="UTF-8">
     <style>
         a{color:#A01F1F}
         a:hover{color:#C60606}
-        body{
-        background: url("/static/img/main_picture_1.jpg") no-repeat;
-        background-size: 100% 100%;
-        background-attachment: fixed;
        ul {
         list-style-type: none;
         }
+        table{width:100%}
+        ul{text-align:center}
         div .group{background-color: rgba(0,0,0,0.5)}
+        ul {
+            list-style: none;
+            padding-left: 0;
+            }
+        tr, th{width:25%;
+        border: 2px solid #333;}
     </style>
 </head>
 <body>
-<!--<div>-->
-<!--    {% for elem in sp%}-->
-<!--        <a href="{{elem.href}}">{{elem.name}}-->
-<!--        <img src="{{elem.img}}"></a>-->
-<!--    {%endfor%}-->
-<!--</div>-->
 <p></p>
 <div class="group">
 {% autoescape false %}

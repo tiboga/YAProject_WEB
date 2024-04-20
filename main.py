@@ -267,11 +267,11 @@ def all_weapons():
     html_code = ''
     for key in dict_with_classes.keys():
         print(name_map[key])
-        html_code += f"""<table>
+        html_code += f"""<p></p><table>
                             <tr>
                                 <th>
                                     <div class="info_box">
-                                        <h2 style="color: #4ad94b" href="/class_of_weapon/{name_map[key]}">{key}</h2>
+                                        <h3><a style="color: #4ad94b" href="/class_of_weapon/{name_map[key]}">{key}</a></h3>
                                     </div>
                                 </th>
                             </tr>
@@ -281,7 +281,10 @@ def all_weapons():
                                 <th>
                                     <div class="info_box">'''
             for href_and_name in into_values:
-                html_code += f'''<a style="color: {color_map[str(into_key)]}" href="{href_and_name['href']}">{href_and_name['name']} </a>'''
+                if into_values.index(href_and_name) == len(into_values) - 1:
+                    html_code += f'''<a style="color: {color_map[str(into_key)]}" href="{href_and_name['href']}">{href_and_name['name']}</a>'''
+                else:
+                    html_code += f'''<a style="color: {color_map[str(into_key)]}" href="{href_and_name['href']}">{href_and_name['name']}</a><a style="color: #ffffff"> • </a>'''
             html_code += '''      </div>
                                     </th>
                                 </tr>
