@@ -3,21 +3,24 @@ import math
 from pprint import pprint
 
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify, url_for
+import weapons_resources
 from data import db_session
 from data.users import User
 from data.comment_model import Comment
 from forms.comment import AddComment
+from data.weapons import Weapons
+from forms.weapons import WeaponsForm
+from data.armor import Armor
+from forms.armor import ArmorForm
 from forms.user import RegisterForm
 from forms.user import LoginForm
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
-from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField
-from wtforms.validators import DataRequired
 
 Previous_page = '/'
 
@@ -359,19 +362,64 @@ def armor(name, clas=None):
     return render_template('armor_info.html', dict=diction, img_url=img_url, need_comment=True, comments=comments)
 
 
+@app.route('/class_of_armor/<clas>/<fav>')
 @app.route('/class_of_armor/<clas>')
-def ret_class_of_armor(clas):
+def ret_class_of_armor(clas, fav=None):
     global Previous_page
     Previous_page = f'/class_of_armor/{clas}'
+    db_sess = db_session.create_session()
     with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
-    for elem in tmp_dict.values():
-        if elem['paths']['json'].split("/")[-2] == clas:
-            sp_of_a.append(
-                {'name': elem['additional_key'], 'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
-                                                         elem['paths']['json'].split('/')[-2:][1].split('.')[0],
-                 "img": elem["paths"]['image']})
+    armor = db_sess.query(Armor).filter(Armor.user == current_user
+                                            ).first()
+    items_in_armor = ""
+    if armor:
+        items_in_armor = f"{armor.clothes}, {armor.combat}, {armor.combined}, {armor.device}, {armor.scientist}"
+    if not fav:
+        for elem in tmp_dict.values():
+            if elem['paths']['json'].split("/")[-2] == clas:
+                sp_of_a.append(
+                    {'name': elem['additional_key'],
+                     'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                             elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                     "img": elem["paths"]['image']})
+    else:
+        if armor:
+            if clas == 'clothes':
+                if fav not in str(armor.clothes):
+                    armor.clothes = f'{armor.clothes}, {fav}'
+                else:
+                    armor.clothes = armor.clothes.replace(f", {fav}", "")
+            elif clas == 'combat':
+                if fav not in str(armor.combat):
+                    armor.combat = f'{armor.combat}, {fav}'
+                else:
+                    armor.combat = armor.combat.replace(f", {fav}", "")
+            elif clas == 'combined':
+                if fav not in str(armor.combined):
+                    armor.combined = f'{armor.combined}, {fav}'
+                else:
+                    armor.combined = armor.combined.replace(f", {fav}", "")
+            elif clas == 'device':
+                if fav not in str(armor.device):
+                    armor.device = f'{armor.device}, {fav}'
+                else:
+                    armor.device = armor.device.replace(f", {fav}", "")
+            elif clas == 'scientist':
+                if fav not in str(armor.scientist):
+                    armor.scientist = f'{armor.scientist}, {fav}'
+                else:
+                    armor.scientist = armor.scientist.replace(f", {fav}", "")
+            db_sess.commit()
+
+            return redirect(f"/class_of_armor/{clas}")
+        else:
+            armor1 = Armor()
+            current_user.armor.append(armor1)
+            db_sess.merge(current_user)
+            db_sess.commit()
+            return redirect(f"/class_of_armor/{clas}/{fav}")
     db_sess = db_session.create_session()
     comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/class_of_armor/{clas}').all()
     return render_template('armor_group.html', sp=sp_of_a, need_comment=True, comments=comments)
