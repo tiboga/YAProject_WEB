@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div .info_box{background-color:rgba(0, 0, 0, 0.5);
+                        text-align:center}
+        table{width: 100%}
+        tr{padding: 5px;}
+    </style>
+</head>
+{% autoescape false %}
+{{html_code}}
+{% endautoescape %}
+{% endblock %}
