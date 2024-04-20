@@ -3,13 +3,10 @@ import math
 from pprint import pprint
 
 from flask import Flask, render_template, redirect, request, make_response, session, abort, jsonify, url_for
-import weapons_resources
 from data import db_session
 from data.users import User
-from data.weapons import Weapons
-from forms.weapons import WeaponsForm
-from data.armor import Armor
-from forms.armor import ArmorForm
+from data.comment_model import Comment
+from forms.comment import AddComment
 from forms.user import RegisterForm
 from forms.user import LoginForm
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
@@ -18,12 +15,35 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 login_manager = LoginManager()
 login_manager.init_app(app)
+from flask_wtf import FlaskForm
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import DataRequired
+
+Previous_page = '/'
 
 
 @login_manager.user_loader
 def load_user(user_id):
     db_sess = db_session.create_session()
     return db_sess.query(User).get(user_id)
+
+
+@app.route("/add_comment", methods=['GET', 'POST'])
+def add_comment():
+    form = AddComment()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        comment = Comment()
+        comment.comment_text = form.text.data
+        comment.state_of_comment = Previous_page
+        db_sess.add(comment)
+        db_sess.commit()
+        return redirect(Previous_page)
+    if current_user.is_authenticated:
+
+        return render_template('add_comment.html', title='Добавление комментария', form=form, need_comment=False)
+    else:
+        return render_template("for_noauthorised_users.html", need_comment=False)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -37,8 +57,8 @@ def login():
             return redirect("/weapons")
         return render_template('login.html',
                                message="Неправильный логин или пароль",
-                               form=form)
-    return render_template('login.html', title='Авторизация', form=form)
+                               form=form, need_comment=False)
+    return render_template('login.html', title='Авторизация', form=form, need_comment=False)
 
 
 @app.route("/cookie_test")
@@ -84,7 +104,7 @@ def weapons(id=0, fav=False):
         else:
             abort(404)
         return redirect("/weapons")
-    return render_template("weapons.html", new_weapon=weapons, fav=fav)
+    return render_template("weapons.html", new_weapon=weapons, fav=fav, need_comment=False)
 
 
 """
@@ -127,8 +147,11 @@ def index():
 @app.route('/weapon/<clas>/<name>')
 @app.route('/weapon/<name>')
 def weapon(name, clas=None):
+    global Previous_page
     img_url = ''
+    comments = []
     if not clas:
+        Previous_page = f'/weapon/{name}'
         path = None
         with open('maps/map.json', 'r', encoding='UTF-8') as f:
             tmp_dict = json.load(f)
@@ -142,16 +165,23 @@ def weapon(name, clas=None):
             if path:
                 with open(path, 'r', encoding="UTF-8") as f:
                     diction = json.load(f)
+        db_sess = db_session.create_session()
+        comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/weapon/{name}').all()
 
     else:
+        Previous_page = f'/weapon/{clas}/{name}'
         with open(f'value/items/weapon/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
             diction = json.load(f)
         img_url = f'/static/value/icons/weapon/{clas}/{name}.png'
-    return render_template('weapon_info.html', dict=diction, img_url=img_url)
+        db_sess = db_session.create_session()
+        comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/weapon/{clas}/{name}').all()
+    return render_template('weapon_info.html', dict=diction, img_url=img_url, need_comment=True, comments=comments)
 
 
 @app.route('/class_of_weapon/<clas>')
 def ret_class_of_weapon(clas):
+    global Previous_page
+    Previous_page = f'/class_of_weapon/{clas}'
     with open('maps/map.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
@@ -166,12 +196,15 @@ def ret_class_of_weapon(clas):
         sp_of_a) - 1 else f"<th><ul><li><a href='{sp_of_a[j * 4 + i]['href']}'>{sp_of_a[j * 4 + i]['name']}</a></li><li><a href='{sp_of_a[j * 4 + i]['href']}' ><img src='{sp_of_a[j * 4 + i]['img']}'></a></li></ul></th>"
                                                        for i in range(4)]) + '</tr>' for j in
                                      range(len_line)]) + '</table>'
-
-    return render_template('weapon_group.html', elem=html_code)
+    db_sess = db_session.create_session()
+    comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/class_of_weapon/{clas}').all()
+    return render_template('weapon_group.html', elem=html_code, need_comment=True, comments=comments)
 
 
 @app.route('/all_weapons')
 def all_weapons():
+    global Previous_page
+    Previous_page = f'/all_weapons'
     translate_dict = {'Отмычка': 1,
                       'Новичок': 2,
                       'Сталкер': 3,
@@ -263,10 +296,8 @@ def all_weapons():
             {'name': elem['additional_key'],
              'href': '/weapon/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
                      elem['paths']['json'].split('/')[-2:][1].split('.')[0]})
-    pprint(dict_with_classes)
     html_code = ''
     for key in dict_with_classes.keys():
-        print(name_map[key])
         html_code += f"""<p></p><table>
                             <tr>
                                 <th>
@@ -290,15 +321,19 @@ def all_weapons():
                                 </tr>
                                     '''
         html_code += '</table>'
-
-    return render_template('all_weapons.html', html_code=html_code)
+    db_sess = db_session.create_session()
+    comments = db_sess.query(Comment).filter(Comment.state_of_comment == '/all_weapons').all()
+    return render_template('all_weapons.html', html_code=html_code, need_comment=True, comments=comments)
 
 
 @app.route('/armor/<clas>/<name>')
 @app.route('/armor/<name>')
 def armor(name, clas=None):
+    global Previous_page
     img_url = ''
     if not clas:
+
+        Previous_page = f'/armor/{name}'
         path = None
         with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
             tmp_dict = json.load(f)
@@ -312,15 +347,22 @@ def armor(name, clas=None):
             if path:
                 with open(path, 'r', encoding="UTF-8") as f:
                     diction = json.load(f)
+        db_sess = db_session.create_session()
+        comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/armor/{name}').all()
     else:
+        Previous_page = f'/armor/{clas}/{name}'
         with open(f'value/items/armor/{clas}/{name}.json', 'r', encoding="UTF-8") as f:
             diction = json.load(f)
         img_url = f'/static/value/icons/armor/{clas}/{name}.png'
-    return render_template('armor_info.html', dict=diction, img_url=img_url)
+        db_sess = db_session.create_session()
+        comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/armor/{clas}/{name}').all()
+    return render_template('armor_info.html', dict=diction, img_url=img_url, need_comment=True, comments=comments)
 
 
 @app.route('/class_of_armor/<clas>')
 def ret_class_of_armor(clas):
+    global Previous_page
+    Previous_page = f'/class_of_armor/{clas}'
     with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
@@ -330,7 +372,9 @@ def ret_class_of_armor(clas):
                 {'name': elem['additional_key'], 'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
                                                          elem['paths']['json'].split('/')[-2:][1].split('.')[0],
                  "img": elem["paths"]['image']})
-    return render_template('armor_group.html', sp=sp_of_a)
+    db_sess = db_session.create_session()
+    comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/class_of_armor/{clas}').all()
+    return render_template('armor_group.html', sp=sp_of_a, need_comment=True, comments=comments)
 
 
 """
@@ -485,17 +529,19 @@ def logout():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    global Previous_page
+    Previous_page = f'/register'
     form = RegisterForm()
     if form.validate_on_submit():
         if form.password.data != form.password_again.data:
             return render_template('register.html', title='Регистрация',
                                    form=form,
-                                   message="Пароли не совпадают")
+                                   message="Пароли не совпадают", need_comment=False)
         db_sess = db_session.create_session()
         if db_sess.query(User).filter(User.email == form.email.data).first():
             return render_template('register.html', title='Регистрация',
                                    form=form,
-                                   message="Такой пользователь уже есть")
+                                   message="Такой пользователь уже есть", need_comment=False)
         user = User(
             name=form.name.data,
             email=form.email.data,
@@ -505,15 +551,18 @@ def register():
         db_sess.add(user)
         db_sess.commit()
         return redirect('/login')
-    return render_template('register.html', title='Регистрация', form=form)
+    return render_template('register.html', title='Регистрация', form=form, need_comment=False)
 
 
 def main():
+    global Previous_page
     db_session.global_init("db/blogs.db")
+    Previous_page = '/'
     # api.add_resource(weapons_resources.WeaponsListResource, '/api/v2/weapons')
     # api.add_resource(weapons_resources.WeaponsResource, '/api/v2/weapons/<int:weapons_id>')
     app.run()
 
 
 if __name__ == '__main__':
+    Previous_page = '/'
     main()
