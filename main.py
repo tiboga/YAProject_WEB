@@ -430,20 +430,14 @@ def ret_class_of_armor(clas, fav=None):
     with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
         tmp_dict = json.load(f)
     sp_of_a = []
-    armor = db_sess.query(Armor).filter(Armor.user == current_user
+    if current_user.is_authenticated:
+        armor = db_sess.query(Armor).filter(Armor.user == current_user
                                             ).first()
-    items_in_armor = ""
-    if armor:
-        items_in_armor = f"{armor.clothes}, {armor.combat}, {armor.combined}, {armor.device}, {armor.scientist}"
-    if not fav:
-        for elem in tmp_dict.values():
-            if elem['paths']['json'].split("/")[-2] == clas:
-                sp_of_a.append(
-                    {'name': elem['additional_key'],
-                     'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
-                             elem['paths']['json'].split('/')[-2:][1].split('.')[0],
-                     "img": elem["paths"]['image']})
-    else:
+        items_in_armor = ""
+        if armor:
+            items_in_armor = f"{armor.clothes}, {armor.combat}, {armor.combined}, {armor.device}, {armor.scientist}"
+
+    if fav:
         if armor:
             if clas == 'clothes':
                 if fav not in str(armor.clothes):
@@ -479,7 +473,18 @@ def ret_class_of_armor(clas, fav=None):
             db_sess.merge(current_user)
             db_sess.commit()
             return redirect(f"/class_of_armor/{clas}/{fav}")
-    return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor)
+    else:
+        for elem in tmp_dict.values():
+            if elem['paths']['json'].split("/")[-2] == clas:
+                sp_of_a.append(
+                    {'name': elem['additional_key'],
+                     'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                             elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                     "img": elem["paths"]['image']})
+        if current_user.is_authenticated:
+            return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor)
+        return render_template('armor_group.html', sp=sp_of_a, clas=clas)
+
 
 
 """
