@@ -10,10 +10,10 @@
     {% for elem in sp%}
     <div class="card">
         {% if current_user.is_authenticated %}
-            {% if elem.name not in items_in_armor %}
-                <a href="/class_of_armor/{{clas}}/{{elem.name}}"><i class="fa-solid fa-heart" style="color: white; text-shadow: 5px 5px 6px black;"></i></a>
+            {% if elem.original_name not in items_in_armor %}
+                <a href="/class_of_armor/{{clas}}/{{elem.original_name}}"><i class="fa-solid fa-heart" style="color: white; text-shadow: 5px 5px 6px black;"></i></a>
             {% else %}
-                <a href="/class_of_armor/{{clas}}/{{elem.name}}"><i class="fa-solid fa-heart" style="color: red; text-shadow: 5px 5px 6px orange;"></i></a>
+                <a href="/class_of_armor/{{clas}}/{{elem.original_name}}"><i class="fa-solid fa-heart" style="color: red; text-shadow: 5px 5px 6px orange;"></i></a>
             {% endif %}
         {% endif %}
         <a href="{{elem.href}}" style="width:100%">

@@ -16,6 +16,7 @@
             width: 100%;
             display:inline-block;
             margin-bottom: 0px}
+         .last {border-top: 2px solid rgb(24,255,195)}
     </style>
     <title>{{title}}</title>
 </head>
@@ -46,7 +47,6 @@
                     guns
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/all_weapons">all</a></li>
                     <li><a class="dropdown-item" href="/class_of_weapon/assault_rifle">assault_rifle</a></li>
                     <li><a class="dropdown-item" href="/class_of_weapon/device">device</a></li>
                     <li><a class="dropdown-item" href="/class_of_weapon/heavy">heavy</a></li>
@@ -56,6 +56,7 @@
                     <li><a class="dropdown-item" href="/class_of_weapon/shotgun_rifle">shotgun_rifle</a></li>
                     <li><a class="dropdown-item" href="/class_of_weapon/sniper_rifle">sniper_rifle</a></li>
                     <li><a class="dropdown-item" href="/class_of_weapon/submachine_gun">submachine_rifle</a></li>
+                    <li class="last"><a class="dropdown-item" href="/all_weapons">all</a></li>
                 </ul>
                 <button type="button" class="btn btn-danger1 dropdown-toggle" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -67,6 +68,7 @@
                     <li><a class="dropdown-item" href="/class_of_armor/combined">combined</a></li>
                     <li><a class="dropdown-item" href="/class_of_armor/device">device</a></li>
                     <li><a class="dropdown-item" href="/class_of_armor/scientist">scientist</a></li>
+                    <li class="last"><a class="dropdown-item" href="/all_armor">all</a></li>
                 </ul>
             </div>
             {% block content %}

@@ -13,12 +13,15 @@ class Weapons(SqlAlchemyBase):
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
                            primary_key=True, autoincrement=True)
-    title = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    content = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    created_date = sqlalchemy.Column(sqlalchemy.DateTime,
-                                     default=datetime.datetime.now)
-    is_private = sqlalchemy.Column(sqlalchemy.Boolean, default=True)
-    favourite = sqlalchemy.Column(sqlalchemy.Boolean, default=True)
+    assault_rifle = sqlalchemy.Column(sqlalchemy.String)
+    pistol = sqlalchemy.Column(sqlalchemy.String)
+    submachine_gun = sqlalchemy.Column(sqlalchemy.String)
+    shotgun_rifle = sqlalchemy.Column(sqlalchemy.String)
+    device = sqlalchemy.Column(sqlalchemy.String)
+    melee = sqlalchemy.Column(sqlalchemy.String)
+    heavy = sqlalchemy.Column(sqlalchemy.String)
+    machine_gun = sqlalchemy.Column(sqlalchemy.String)
+    sniper_rifle = sqlalchemy.Column(sqlalchemy.String)
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
     user = orm.relationship('User')
