@@ -523,59 +523,9 @@ def ret_class_of_armor(clas, fav=None):
             db_sess.merge(current_user)
             db_sess.commit()
             return redirect(f"/class_of_armor/{clas}/{fav}")
-    return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor)
-    armor = db_sess.query(Armor).filter(Armor.user == current_user
-                                            ).first()
-    items_in_armor = ""
-    if armor:
-        items_in_armor = f"{armor.clothes}, {armor.combat}, {armor.combined}, {armor.device}, {armor.scientist}"
-    if not fav:
-        for elem in tmp_dict.values():
-            if elem['paths']['json'].split("/")[-2] == clas:
-                sp_of_a.append(
-                    {'name': elem['additional_key'],
-                     'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
-                             elem['paths']['json'].split('/')[-2:][1].split('.')[0],
-                     "img": elem["paths"]['image']})
-    else:
-        if armor:
-            if clas == 'clothes':
-                if fav not in str(armor.clothes):
-                    armor.clothes = f'{armor.clothes}, {fav}'
-                else:
-                    armor.clothes = armor.clothes.replace(f", {fav}", "")
-            elif clas == 'combat':
-                if fav not in str(armor.combat):
-                    armor.combat = f'{armor.combat}, {fav}'
-                else:
-                    armor.combat = armor.combat.replace(f", {fav}", "")
-            elif clas == 'combined':
-                if fav not in str(armor.combined):
-                    armor.combined = f'{armor.combined}, {fav}'
-                else:
-                    armor.combined = armor.combined.replace(f", {fav}", "")
-            elif clas == 'device':
-                if fav not in str(armor.device):
-                    armor.device = f'{armor.device}, {fav}'
-                else:
-                    armor.device = armor.device.replace(f", {fav}", "")
-            elif clas == 'scientist':
-                if fav not in str(armor.scientist):
-                    armor.scientist = f'{armor.scientist}, {fav}'
-                else:
-                    armor.scientist = armor.scientist.replace(f", {fav}", "")
-            db_sess.commit()
-
-            return redirect(f"/class_of_armor/{clas}")
-        else:
-            armor1 = Armor()
-            current_user.armor.append(armor1)
-            db_sess.merge(current_user)
-            db_sess.commit()
-            return redirect(f"/class_of_armor/{clas}/{fav}")
     db_sess = db_session.create_session()
     comments = db_sess.query(Comment).filter(Comment.state_of_comment == f'/class_of_armor/{clas}').all()
-    return render_template('armor_group.html', sp=sp_of_a, need_comment=True, comments=comments)
+    return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor, need_comment=True, comments=comments)
 
 
 """
