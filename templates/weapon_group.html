@@ -5,7 +5,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <link rel="stylesheet" href="/static/armor_group.css">
 <link rel="stylesheet" href="/static/index.css">
+<link rel="stylesheet" href="/static/btn.css">
 <body>
+{% if current_user.is_authenticated %}
+    {% if favourite_true == "False" %}
+        <a href="/favourite/{{typ}}/{{clas}}//{{items_in_weapon}}" class="fav-btn"><button>Избранное</button></a>
+    {% else %}
+        <a href="{{previous_page}}" class="fav-btn"><button>Все</button></a>
+    {% endif %}
+{% endif %}
 <div>
     {% for elem in sp%}
     <div class="card" style="background-color: rgba(88, 79, 79, 0.58); border-color: grey   ">
@@ -21,7 +29,7 @@
             {{elem.name}}
         </a>
     </div>
-    {%endfor%}
+    {% endfor %}
 </div>
 </body>
 {%endblock%}

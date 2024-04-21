@@ -77,9 +77,11 @@ def cookie_test():
                        max_age=60 * 60 * 24 * 365 * 2)
     return res
 
+
 @app.route('/')
 def index():
     return redirect('/all_weapons')
+
 
 @app.route('/all_weapons')
 def all_weapons():
@@ -259,7 +261,7 @@ def ret_class_of_weapon(clas, fav=None):
         if weapon:
             if clas == 'assault_rifle':
                 if fav not in str(weapon.assault_rifle):
-                    weapon.assault_rifle = f'{weapon.assault_rifle  }, {fav}'
+                    weapon.assault_rifle = f'{weapon.assault_rifle}, {fav}'
                 else:
                     weapon.assault_rifle = weapon.assault_rifle.replace(f", {fav}", "")
             elif clas == 'pistol':
@@ -320,8 +322,10 @@ def ret_class_of_weapon(clas, fav=None):
                              elem['paths']['json'].split('/')[-2:][1].split('.')[0],
                      "img": elem["paths"]['image']})
         if current_user.is_authenticated:
-            return render_template('weapon_group.html', sp=sp_of_a, clas=clas, items_in_weapon=items_in_weapon)
+            return render_template('weapon_group.html', sp=sp_of_a, clas=clas, items_in_weapon=items_in_weapon,
+                                   typ="weapon", favourite_true="False")
         return render_template('weapon_group.html', sp=sp_of_a, clas=clas)
+
 
 @app.route('/all_armor')
 def all_armor():
@@ -475,7 +479,7 @@ def ret_class_of_armor(clas, fav=None):
     sp_of_a = []
     if current_user.is_authenticated:
         armor1 = db_sess.query(Armor).filter(Armor.user == current_user
-                                            ).first()
+                                             ).first()
         items_in_armor = ""
         if armor1:
             items_in_armor = f"{armor1.clothes}, {armor1.combat}, {armor1.combined}, {armor1.device}, {armor1.scientist}"
@@ -521,13 +525,47 @@ def ret_class_of_armor(clas, fav=None):
             if elem['paths']['json'].split("/")[-2] == clas:
                 sp_of_a.append(
                     {'name': elem['additional_key'],
-                     "original_name": elem['paths']['json'].split('/')[-2:][1].split('.')[0]    ,
+                     "original_name": elem['paths']['json'].split('/')[-2:][1].split('.')[0],
                      'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
                              elem['paths']['json'].split('/')[-2:][1].split('.')[0],
                      "img": elem["paths"]['image']})
+
         if current_user.is_authenticated:
-            return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor)
+            return render_template('armor_group.html', sp=sp_of_a, clas=clas, items_in_armor=items_in_armor,
+                                   typ="armor", favourite_true="False")
         return render_template('armor_group.html', sp=sp_of_a, clas=clas)
+
+
+@app.route("/favourite/<typ>/<clas>/<items>")
+def favourite(typ, clas, items):
+    global Previous_page
+    if typ == "armor":
+        Previous_page = f'/class_of_armor/{clas}'
+        with open('maps/map_armor.json', 'r', encoding='UTF-8') as f:
+            tmp_dict = json.load(f)
+    elif typ == "weapon":
+        Previous_page = f'/class_of_weapon/{clas}'
+        with open('maps/map.json', 'r', encoding='UTF-8') as f:
+            tmp_dict = json.load(f)
+    sp_of_a = []
+    for elem in tmp_dict.values():
+        if elem['paths']['json'].split("/")[-2] == clas:
+            sp_of_a.append(
+                {'name': elem['additional_key'],
+                 "original_name": elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                 'href': '/armor/' + elem['paths']['json'].split('/')[-2:][0] + '/' +
+                         elem['paths']['json'].split('/')[-2:][1].split('.')[0],
+                 "img": elem["paths"]['image']})
+    sp_of_b = []
+    for i in sp_of_a:
+        if i["original_name"] in items:
+            sp_of_b.append(i)
+    if typ == "armor":
+        return render_template('armor_group.html', sp=sp_of_b, clas=clas, items_in_armor=items,
+                               typ="armor", favourite_true="True", previous_page=Previous_page)
+    elif typ == "weapon":
+        return render_template('weapon_group.html', sp=sp_of_b, clas=clas, items_in_weapon=items,
+                               typ="weapon", favourite_true="True", previous_page=Previous_page)
 
 @app.route("/session_test")
 def session_test():
