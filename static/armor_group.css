@@ -3,7 +3,8 @@ div{
     flex-wrap: wrap;
     }
 .card {
-    
+    position: relative;
+    top: 75px;
     text-align: center;
 
     margin-top: 15px;

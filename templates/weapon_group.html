@@ -1,35 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!--        body{-->
-<!--        background: url("/static/img/main_picture_1.jpg") no-repeat;-->
-<!--        background-size: 100% 100%;-->
-<!--        background-attachment: fixed;-->
 <head>
-    <meta charset="UTF-8">
-    <style>
-        a{color:#A01F1F}
-        a:hover{color:#C60606}
-       ul {
-        list-style-type: none;
-        }
-        table{width:100%}
-        ul{text-align:center}
-        div .group{background-color: rgba(0,0,0,0.5)}
-        ul {
-            list-style: none;
-            padding-left: 0;
-            }
-        tr, th{width:25%;
-        border: 2px solid #333;}
-    </style>
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<link rel="stylesheet" href="/static/armor_group.css">
+<link rel="stylesheet" href="/static/index.css">
+<link rel="stylesheet" href="/static/btn.css">
 <body>
-<p></p>
-<div class="group">
-{% autoescape false %}
-{{elem}}
-{% endautoescape %}
+{% if current_user.is_authenticated %}
+    {% if favourite_true == "False" %}
+        <a href="/favourite/{{typ}}/{{clas}}//{{items_in_weapon}}" class="fav-btn"><button>Избранное</button></a>
+    {% else %}
+        <a href="{{previous_page}}" class="fav-btn"><button>Все</button></a>
+    {% endif %}
+{% endif %}
+<div>
+    {% for elem in sp%}
+    <div class="card" style="background-color: rgba(88, 79, 79, 0.58); border-color: grey   ">
+        {% if current_user.is_authenticated %}
+            {% if elem.original_name not in items_in_weapon %}
+                <a href="/class_of_weapon/{{clas}}/{{elem.original_name}}"><i class="fa-solid fa-heart" style="color: white; text-shadow: 5px 5px 6px black;"></i></a>
+            {% else %}
+                <a href="/class_of_weapon/{{clas}}/{{elem.original_name}}"><i class="fa-solid fa-heart" style="color: red; text-shadow: 5px 5px 6px orange;"></i></a>
+            {% endif %}
+        {% endif %}
+        <a href="{{elem.href}}" style="color: red">
+            <img src="{{elem.img}}"><br>
+            {{elem.name}}
+        </a>
+    </div>
+    {% endfor %}
 </div>
 </body>
 {%endblock%}
