@@ -23,9 +23,9 @@ def maker():
                                      list(filter(lambda x: x.split('/')[-1].split('.')[0] == key, sp))))
             for e in list_of_paths:
                 if list(e.keys())[0] == 'image':
-                    dict_of_path['image'] = '/static/' + list(e.values())[0]
+                    dict_of_path['image'] = '/static/' + list(e.values())[0].replace("../", '/')
                 else:
-                    dict_of_path['json'] = list(e.values())[0]
+                    dict_of_path['json'] = list(e.values())[0].replace("../", '/')[1:]
 
             out_diction[key] = {'paths': dict_of_path,
                                 'additional_key': dict_info['name']}
