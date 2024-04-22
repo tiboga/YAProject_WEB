@@ -79,7 +79,9 @@ def cookie_test():
 
 @app.route('/')
 def index():
-    return redirect('/all_weapons')
+    db_sess = db_session.create_session()
+    comments = db_sess.query(Comment).filter(Comment.state_of_comment == '/all_weapons').all()
+    return render_template('main.html', need_comment=True, comments=comments)
 
 
 @app.route('/all_weapons')
